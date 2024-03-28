@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-
 @Component({
   selector: 'app-naslovna',
   templateUrl: './naslovna.component.html',
@@ -29,30 +28,30 @@ export class NaslovnaComponent implements OnInit {
   zoomState: string = 'large';
 
   ngOnInit(): void {
-    // postavljanje slika
+    // setting images
     this.images = ['/assets/slide_01.jpg', '/assets/slide_02.jpg', '/assets/slide_03.jpg'];
-    // postavljanje početne slike i pokretanje automatske promjene slika nakon 5 sekundi (disejblan carousel prvih 5 sec)
+    // setting the initial image and starting automatic image change after 5 seconds (carousel disabled for the first 5 sec)
     setTimeout(() => {
       this.pageLoaded = true;
       this.activeIndex = (this.activeIndex + 1) % this.images.length;
       this.startAutoChange();
       this.canChangeImage = true;
     }, 5000);
-    // pokretanje animacije zumiranja nakon 5.5 sekundi
+    // starting zoom animation after 5.5 seconds
     setTimeout(() => {
       this.zoomState = 'small';
     }, 5000);
   }
 
-  // onZoomOutEnd se poziva kada završi animacija zumiranja
+  // onZoomOutEnd is called when the zoom animation ends
   onZoomOutEnd() {
-    // resetiranje stanja zumiranja
+    // resetting zoom state
     if (this.zoomState === 'small') {
       this.zoomState = 'large';
     }
   }
 
-  // startAutoChange automatski mijenja slike svakih 8 sekundi
+  // startAutoChange automatically changes images every 8 seconds
   startAutoChange() {
     this.intervalId = setInterval(() => {
       if (this.autoChange) {
@@ -62,7 +61,7 @@ export class NaslovnaComponent implements OnInit {
     }, 8000);
   }
 
-  // goToImage mijenja sliku na onu koja je kliknuta
+  // goToImage changes the image to the one that was clicked
   goToImage(index: number) {
     if (!this.canChangeImage || index === this.activeIndex) {
       return;
@@ -76,22 +75,22 @@ export class NaslovnaComponent implements OnInit {
     }, 1000);
   }
 
-  // stopAutoChange zaustavlja automatsku promjenu slika
+  // stopAutoChange stops automatic image change
   stopAutoChange() {
     clearInterval(this.intervalId);
   }
 
-  // onMouseEnter se poziva kada miš ulazi u područje slike, zaustavlja automatsku promjenu slika
+  // onMouseEnter is called when the mouse enters the image area, stops automatic image change
   onMouseEnter() {
     this.autoChange = false;
   }
 
-  // onMouseLeave se poziva kada miš izlazi iz područja slike, pokreće automatsku promjenu slika
+  // onMouseLeave is called when the mouse leaves the image area, starts automatic image change
   onMouseLeave() {
     this.autoChange = true;
   }
 
-  // next mijenja sliku na sljedeću
+  // next changes the image to the next one
   next() {
     clearInterval(this.intervalId);
     this.previousIndex = this.activeIndex;
@@ -99,7 +98,7 @@ export class NaslovnaComponent implements OnInit {
     this.startAutoChange();
   }
 
-  // previous mijenja sliku na prethodnu
+  // previous changes the image to the previous one
   previous() {
     this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
   }
