@@ -1,8 +1,18 @@
 .nav-link-color {
     color: white !important;
 }
-.navbar{
+.navbar {
     border-bottom: 0.5px solid #ffffff23;
     position: relative; // or absolute, depending on your layout
     z-index: 2;
+}
+.dropdown-menu {
+    background-color: #343a4000;
+}
+.dropdown-item {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); // changes black to white and vice versa
 }

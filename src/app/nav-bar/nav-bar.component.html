@@ -4,11 +4,11 @@
             <a class="navbar-brand" href="#">
                 <img src="\assets\logo_nav.png" alt="Logo" style="height: 50px;">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+                [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul ngbNav #nav="ngbNav" [activeId]="1" class="navbar-nav">
                     <li [ngbNavItem]="1">
                         <button ngbNavLink class="nav-link-color"><b>NASLOVNA</b></button>
