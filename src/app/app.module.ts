@@ -6,13 +6,15 @@ import { NaslovnaComponent } from './naslovna/naslovna.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NaslovnaComponent,
-    NavBarComponent
+    NavBarComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

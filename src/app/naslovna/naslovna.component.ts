@@ -18,7 +18,7 @@ import { NavbarService } from '../navbar.service';
 })
 export class NaslovnaComponent implements OnInit {
 
-
+  //DEPENDENCIES BROWSERANIMATIONMODULE, NAVBARSERVICE
 
   images!: string[];
   activeIndex = 0;
@@ -30,13 +30,17 @@ export class NaslovnaComponent implements OnInit {
   canChangeImage = false;
   zoomState: string = 'large';
   dropdownOpened$ = this.navbarService.dropdownOpened$;
+  navbarTogglerState = false;
+
 
   constructor(public navbarService: NavbarService) {
     this.dropdownOpened$.subscribe(open => {
       console.log('Dropdown opened2:', open);
     });
+    this.navbarService.navbarTogglerState$.subscribe(state => {
+      this.navbarTogglerState = state;
+    });
   }
-
 
   ngOnInit(): void {
     // setting images
@@ -53,7 +57,6 @@ export class NaslovnaComponent implements OnInit {
       this.zoomState = 'small';
     }, 5000);
   }
-
   // onZoomOutEnd is called when the zoom animation ends
   onZoomOutEnd() {
     // resetting zoom state
@@ -61,7 +64,6 @@ export class NaslovnaComponent implements OnInit {
       this.zoomState = 'large';
     }
   }
-
   // startAutoChange automatically changes images every 8 seconds
   startAutoChange() {
     this.intervalId = setInterval(() => {
@@ -71,7 +73,6 @@ export class NaslovnaComponent implements OnInit {
       }
     }, 8000);
   }
-
   // goToImage changes the image to the one that was clicked
   goToImage(index: number) {
     if (!this.canChangeImage || index === this.activeIndex) {
@@ -85,22 +86,18 @@ export class NaslovnaComponent implements OnInit {
       this.startAutoChange();
     }, 1000);
   }
-
   // stopAutoChange stops automatic image change
   stopAutoChange() {
     clearInterval(this.intervalId);
   }
-
   // onMouseEnter is called when the mouse enters the image area, stops automatic image change
   onMouseEnter() {
     this.autoChange = false;
   }
-
   // onMouseLeave is called when the mouse leaves the image area, starts automatic image change
   onMouseLeave() {
     this.autoChange = true;
   }
-
   // next changes the image to the next one
   next() {
     clearInterval(this.intervalId);
@@ -108,10 +105,8 @@ export class NaslovnaComponent implements OnInit {
     this.activeIndex = (this.activeIndex + 1) % this.images.length;
     this.startAutoChange();
   }
-
   // previous changes the image to the previous one
   previous() {
     this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
   }
-
 }

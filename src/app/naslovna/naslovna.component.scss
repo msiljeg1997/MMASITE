@@ -199,22 +199,22 @@
 }
 @media (max-width: 1000px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 40%), -160px);
+      transform: translate(calc(50% - 40%), -110px);
   }
 }
 @media (max-width: 900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -160px);
+      transform: translate(calc(50% - 45%), -110px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 50%), -160px);
+      transform: translate(calc(50% - 50%), -110px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -160px);
+      transform: translate(calc(50% - 45%), -110px);
   }
 }
 @media (max-width: 580px) {
@@ -230,8 +230,8 @@
       transform: translate(calc(50% - 45%), -130px);
   }
 }
-//da dropdown na mobile gurne tekst na dole
-@media (max-width: 900px) {
+//da dropdown na mobile gurne tekst na dole isto dio navbar service i navbar.ts i html-bundle. !! VAZNO
+@media (max-width: 1000px) {
   .text-wrapper.pushed-down {
     transform: translate(calc(50% - 40%), calc(-160px + 200px));  // Adjust this value as needed
   }
@@ -255,29 +255,38 @@ color: white;
 }
 .getStartedBtn {
   width: 200px;
-  background-color: rgb(188, 31, 31); // Red background
-  border: none; // Remove the default button border
-  border-radius: 0; // Sharp edges
-  color: white; // White text
-  font-size: 16px; // Increase the font size
-  text-transform: uppercase; // Uppercase text
+  background-color: rgb(188, 31, 31);
+  border: none;
+  border-radius: 0;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
   font-weight: bolder;
-  padding: 10px 20px; // Add some padding
-  cursor: pointer; // Change the cursor to a pointer when hovering over the button
-  transform: translateY(2px); // Move the button down by 2px when not on hover
-  transition: transform 0.3s ease, background-color 0.3s ease; // Smooth trans
+  padding: 10px 20px;
+  cursor: pointer;
+  transform: translateY(2px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .getStartedBtn:hover {
-  background-color: rgb(158, 1, 1); // Darken the background color when hovering over the button
+  background-color: rgb(158, 1, 1);
   transform: translateY(-2px);
 }
 
-////////////////////////////////SECTION 2////////////////////////////////////////
-
-
-#uniqueContainer{
-  background-color: black;
+/////SECTION2 JAKO POVEZANO SA NAVBAROM TAKO DA AKO KOPIRAS KOPIRAJ NAV SERVICE I CJELI NAV.TS I HTML- BUNDLE/// 
+.rowStyle1 {
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 85vh;
 }
-.rowStyle1{
-  max-height: 800px;
+.rowStyle1.navbar-toggler-active {
+  margin-top: 55vh;
+}
+.dropdown-active{
+  margin-top: 35vh;
+  background-color: rgb(0, 0, 0);
+}
+.rowStyle2{
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  
 }

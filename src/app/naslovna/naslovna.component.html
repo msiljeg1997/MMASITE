@@ -10,7 +10,7 @@
                       }" [@zoomOut]="i === activeIndex ? zoomState : 'large'" (@zoomOut.done)="onZoomOutEnd()"
                         *ngIf="i === activeIndex || i === previousIndex" />
                     <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
-                        [ngClass]="{'pushed-down': navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')}">
+                        [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
                         <p class="firstP">Welcome To The Fight!</p>
                         <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
                             Martial Arts In The World</h1>
@@ -36,6 +36,16 @@
         </div>
     </div>
 </section>
-<section class="new-section" style="margin-top: 100vh;">
-    <!-- Your content here -->
-</section>
+<!-- TO DOLE SLUZI ZA RAZMAK IZMEDJU SEKCIJA, VAZNO ZA SHEME! NE DIRAJ, POVEZANO SA NAV.SERVICE -> NAVBAROM -->
+<div class="rowStyle1"
+    [class.navbar-toggler-active]="navbarTogglerState && !(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()"
+    [class.dropdown-active]="(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()">
+    <div class="col-md-12">
+
+    </div>
+</div>
+<div class="row rowStyle2 mb-4" style="z-index: 999;">
+    <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <h1>OVO JE SEKCIJA 2</h1>
+    </div>
+</div>

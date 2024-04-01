@@ -4,7 +4,7 @@
             <a class="navbar-brand" href="#">
                 <img src="\assets\crows_logo_1.1-rb.png" alt="Logo" style="height: 60px; width: 250px;">
             </a>
-            <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+            <button class="navbar-toggler" type="button" (click)="onNavbarTogglerClick()"
                 [attr.aria-expanded]="!isCollapsed" aria-controls="navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
