@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { NavbarService } from '../navbar.service';
 
 @Component({
   selector: 'app-naslovna',
@@ -17,6 +18,8 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class NaslovnaComponent implements OnInit {
 
+
+
   images!: string[];
   activeIndex = 0;
   autoChange = true;
@@ -26,6 +29,14 @@ export class NaslovnaComponent implements OnInit {
   firstCall = true;
   canChangeImage = false;
   zoomState: string = 'large';
+  dropdownOpened$ = this.navbarService.dropdownOpened$;
+
+  constructor(public navbarService: NavbarService) {
+    this.dropdownOpened$.subscribe(open => {
+      console.log('Dropdown opened2:', open);
+    });
+  }
+
 
   ngOnInit(): void {
     // setting images

@@ -10,7 +10,7 @@
                       }" [@zoomOut]="i === activeIndex ? zoomState : 'large'" (@zoomOut.done)="onZoomOutEnd()"
                         *ngIf="i === activeIndex || i === previousIndex" />
                     <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
-                        *ngIf="i === activeIndex">
+                        [ngClass]="{'pushed-down': navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')}">
                         <p class="firstP">Welcome To The Fight!</p>
                         <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
                             Martial Arts In The World</h1>

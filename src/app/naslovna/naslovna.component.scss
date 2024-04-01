@@ -89,132 +89,132 @@
 }
 .text-wrapperKlasa {
   position: absolute;
-  transform: translate(calc(50% + 15%), -170px); // Move the div to the left by 75% of its width and up by 50px
+  transform: translate(calc(50% + 15%), -160px); // Move the div to the left by 75% of its width and up by 50px
   max-width: 580px;
 }
 
 @media (max-width: 3256px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 130%), -170px);
+      transform: translate(calc(50% + 130%), -160px);
   }
 }
 
 @media (max-width: 3100px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 118%), -170px);
+      transform: translate(calc(50% + 118%), -160px);
   }
 }
 
 @media (max-width: 2900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 100%), -170px);
+      transform: translate(calc(50% + 100%), -160px);
   }
 }
 @media (max-width: 2800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 90%), -170px);
+      transform: translate(calc(50% + 90%), -160px);
   }
 }
 @media (max-width: 2700px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 80%), -170px);
+      transform: translate(calc(50% + 80%), -160px);
   }
 }
 @media (max-width: 2600px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 70%), -170px);
+      transform: translate(calc(50% + 70%), -160px);
   }
 }
 
 @media (max-width: 2500px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 60%), -170px);
+      transform: translate(calc(50% + 60%), -160px);
   }
 }
 
 @media (max-width: 2400px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 50%), -170px);
+      transform: translate(calc(50% + 50%), -160px);
   }
 }
 
 @media (max-width: 2300px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 40%), -170px);
+      transform: translate(calc(50% + 40%), -160px);
   }
 }
 
 @media (max-width: 2200px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 30%), -170px);
+      transform: translate(calc(50% + 30%), -160px);
   }
 }
 
 @media (max-width: 2100px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 20%), -170px);
+      transform: translate(calc(50% + 20%), -160px);
   }
 }
 
 @media (max-width: 2000px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 10%), -170px);
+      transform: translate(calc(50% + 10%), -160px);
   }
 }
 
 @media (max-width: 1900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 0%), -170px);
+      transform: translate(calc(50% + 0%), -160px);
   }
 }
 @media (max-width: 1600px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 10%), -170px);
+      transform: translate(calc(50% - 10%), -160px);
   }
 }
 @media (max-width: 1500px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 15%), -170px);
+      transform: translate(calc(50% - 15%), -160px);
   }
 }
 @media (max-width: 1400px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 20%), -170px);
+      transform: translate(calc(50% - 20%), -160px);
   }
 }
 @media (max-width: 1300px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 25%), -170px);
+      transform: translate(calc(50% - 25%), -160px);
   }
 }
 @media (max-width: 1200px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 30%), -170px);
+      transform: translate(calc(50% - 30%), -160px);
   }
 }
 @media (max-width: 1100px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 35%), -170px);
+      transform: translate(calc(50% - 35%), -160px);
   }
 }
 @media (max-width: 1000px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 40%), -170px);
+      transform: translate(calc(50% - 40%), -160px);
   }
 }
 @media (max-width: 900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -170px);
+      transform: translate(calc(50% - 45%), -160px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 50%), -170px);
+      transform: translate(calc(50% - 50%), -160px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -170px);
+      transform: translate(calc(50% - 45%), -160px);
   }
 }
 @media (max-width: 580px) {
@@ -227,9 +227,15 @@
   .text-wrapperKlasa {
       margin: 20px;
       width: 250px;
+      transform: translate(calc(50% - 45%), -130px);
   }
 }
-
+//da dropdown na mobile gurne tekst na dole
+@media (max-width: 900px) {
+  .text-wrapper.pushed-down {
+    transform: translate(calc(50% - 40%), calc(-160px + 200px));  // Adjust this value as needed
+  }
+}
 
 .firstP{
   color: rgb(188, 31, 31);

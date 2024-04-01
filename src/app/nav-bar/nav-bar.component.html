@@ -17,7 +17,8 @@
                         <button ngbNavLink class="nav-link-color"><b>O NAMA</b></button>
                     </li>
                     <li ngbDropdown class="nav-item" role="presentation">
-                        <button type="button" class="nav-link nav-link-color" ngbDropdownToggle><b>SPORTOVI</b></button>
+                        <button type="button" class="nav-link nav-link-color" ngbDropdownToggle
+                            (click)="toggleDropdown('sportovi')"><b>SPORTOVI</b></button>
                         <div ngbDropdownMenu>
                             <button ngbDropdownItem>MMA</button>
                             <button ngbDropdownItem>COMBAT SAMBO</button>
@@ -26,7 +27,8 @@
                         </div>
                     </li>
                     <li ngbDropdown class="nav-item" role="presentation">
-                        <button type="button" class="nav-link nav-link-color" ngbDropdownToggle><b>PROGRAMI</b></button>
+                        <button type="button" class="nav-link nav-link-color" ngbDropdownToggle
+                            (click)="toggleDropdown('programi')"><b>PROGRAMI</b></button>
                         <div ngbDropdownMenu>
                             <button ngbDropdownItem>ZA DJECU</button>
                             <button ngbDropdownItem>ZA ODRASLE</button>
