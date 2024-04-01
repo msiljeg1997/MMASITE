@@ -87,3 +87,191 @@
   top: calc(100% - 50px);
   width: 100%;
 }
+.text-wrapperKlasa {
+  position: absolute;
+  transform: translate(calc(50% + 15%), -170px); // Move the div to the left by 75% of its width and up by 50px
+  max-width: 580px;
+}
+
+@media (max-width: 3256px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 130%), -170px);
+  }
+}
+
+@media (max-width: 3100px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 118%), -170px);
+  }
+}
+
+@media (max-width: 2900px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 100%), -170px);
+  }
+}
+@media (max-width: 2800px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 90%), -170px);
+  }
+}
+@media (max-width: 2700px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 80%), -170px);
+  }
+}
+@media (max-width: 2600px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 70%), -170px);
+  }
+}
+
+@media (max-width: 2500px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 60%), -170px);
+  }
+}
+
+@media (max-width: 2400px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 50%), -170px);
+  }
+}
+
+@media (max-width: 2300px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 40%), -170px);
+  }
+}
+
+@media (max-width: 2200px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 30%), -170px);
+  }
+}
+
+@media (max-width: 2100px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 20%), -170px);
+  }
+}
+
+@media (max-width: 2000px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 10%), -170px);
+  }
+}
+
+@media (max-width: 1900px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% + 0%), -170px);
+  }
+}
+@media (max-width: 1600px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 10%), -170px);
+  }
+}
+@media (max-width: 1500px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 15%), -170px);
+  }
+}
+@media (max-width: 1400px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 20%), -170px);
+  }
+}
+@media (max-width: 1300px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 25%), -170px);
+  }
+}
+@media (max-width: 1200px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 30%), -170px);
+  }
+}
+@media (max-width: 1100px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 35%), -170px);
+  }
+}
+@media (max-width: 1000px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 40%), -170px);
+  }
+}
+@media (max-width: 900px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 45%), -170px);
+  }
+}
+@media (max-width: 800px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 50%), -170px);
+  }
+}
+@media (max-width: 800px) {
+  .text-wrapperKlasa {
+      transform: translate(calc(50% - 45%), -170px);
+  }
+}
+@media (max-width: 580px) {
+  .text-wrapperKlasa {
+      margin: 20px;
+      width: 350px;
+  }
+}
+@media (max-width: 375px) {
+  .text-wrapperKlasa {
+      margin: 20px;
+      width: 250px;
+  }
+}
+
+
+.firstP{
+  color: rgb(188, 31, 31);
+  font-weight: bolder;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  
+}
+.secondp{
+color: white;
+
+}
+.firstH1{
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.getStartedBtn {
+  width: 200px;
+  background-color: rgb(188, 31, 31); // Red background
+  border: none; // Remove the default button border
+  border-radius: 0; // Sharp edges
+  color: white; // White text
+  font-size: 16px; // Increase the font size
+  text-transform: uppercase; // Uppercase text
+  font-weight: bolder;
+  padding: 10px 20px; // Add some padding
+  cursor: pointer; // Change the cursor to a pointer when hovering over the button
+  transform: translateY(2px); // Move the button down by 2px when not on hover
+  transition: transform 0.3s ease, background-color 0.3s ease; // Smooth trans
+}
+.getStartedBtn:hover {
+  background-color: rgb(158, 1, 1); // Darken the background color when hovering over the button
+  transform: translateY(-2px);
+}
+
+////////////////////////////////SECTION 2////////////////////////////////////////
+
+
+#uniqueContainer{
+  background-color: black;
+}
+.rowStyle1{
+  max-height: 800px;
+}

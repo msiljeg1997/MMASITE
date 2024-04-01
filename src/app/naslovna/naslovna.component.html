@@ -9,27 +9,33 @@
                         'slider-image position-absolute start-0 top-0' : true
                       }" [@zoomOut]="i === activeIndex ? zoomState : 'large'" (@zoomOut.done)="onZoomOutEnd()"
                         *ngIf="i === activeIndex || i === previousIndex" />
+                    <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
+                        *ngIf="i === activeIndex">
+                        <p class="firstP">Welcome To The Fight!</p>
+                        <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
+                            Martial Arts In The World</h1>
+                        <p class="secondp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor
+                            incididunt ut
+                            labore et dolore magna aliqua. ad minim venia, </p>
+                        <button class="getStartedBtn">GET STARTED</button>
+                    </div>
                 </ng-container>
-            </div>
-            <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
-                (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-                <div class="carousel-icons carousel-iconscontainer">
-                    <ng-container *ngFor="let image of images; let i = index">
-                        <div class="carousel-icon" [ngClass]="{'active': i === activeIndex}" (click)="goToImage(i)">
-                            <div class="stripe"></div>
-                            <div class="stripe"></div>
-                            <div class="stripe"></div>
-                        </div>
-                    </ng-container>
+                <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
+                    (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                    <div class="carousel-icons carousel-iconscontainer">
+                        <ng-container *ngFor="let image of images; let i = index">
+                            <div class="carousel-icon" [ngClass]="{'active': i === activeIndex}" (click)="goToImage(i)">
+                                <div class="stripe"></div>
+                                <div class="stripe"></div>
+                                <div class="stripe"></div>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="section2" style="margin-bottom: 400px; z-index: 44;">
-    <div class="row">
-        <div class="col-md-12 w-100" style="background-color: brown; height: 200px;">
-
-        </div>
-    </div>
+<section class="new-section" style="margin-top: 100vh;">
+    <!-- Your content here -->
 </section>
