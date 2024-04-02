@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { NavbarService } from '../navbar.service';
 
 @Component({
@@ -12,13 +12,20 @@ export class NavBarComponent {
   dropdownOpened = false;
   navbarTogglerState = false;
 
-  constructor(private navbarService: NavbarService) {
+  constructor(private navbarService: NavbarService, private renderer: Renderer2) {
     this.navbarService.dropdownOpened$.subscribe(open => {
       console.log('Dropdown opened1:', open);
     });
     this.navbarService.navbarTogglerState$.subscribe(state => {
       this.navbarTogglerState = state;
     });
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.isCollapsed = true;
+    this.navbarService.closeNavbarToggler();
+    this.navbarService.closeAllDropdowns();
   }
 
   toggleDropdown(dropdown: string) {
