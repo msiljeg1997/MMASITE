@@ -423,11 +423,16 @@ color: white;
     cursor: pointer;
     transform: translateY(2px);
 
-  .green-bg-button:hover {
-    background-color: rgb(158, 1, 1);
-    transform: translateY(-2px);
+    background: linear-gradient(to right, black 50%, rgb(188, 31, 31) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1s ease;
+  
+    &:hover {
+      background-position: left bottom;
+    }
   }
-}
+
 .green-bg-price-from{
   font-weight: bolder;
   font-size: 17px;
