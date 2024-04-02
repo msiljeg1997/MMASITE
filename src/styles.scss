@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 990px,
+  md: 1000px,
+  lg: 1200px,
+  xl: 1200px
+);
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
 body {
  background-color: black;
 }

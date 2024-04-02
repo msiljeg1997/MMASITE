@@ -276,7 +276,7 @@ color: white;
 .rowStyle1 {
   height: 100px;
   background-color: rgb(0, 0, 0);
-  margin-top: 85vh;
+  margin-top: 82vh;
 }
 .rowStyle1.navbar-toggler-active {
   margin-top: 55vh;
@@ -286,9 +286,171 @@ color: white;
   background-color: rgb(0, 0, 0);
 }
 
-//SECTION2
-.rowStyle2{
-  height: 500px;
-  background-color: rgb(0, 0, 0);
-  
+//SECTION2 grid
+.yellow-bg {
+  background-color: yellow;
+  height: 400px;
+}
+
+.green-bg {
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  min-height: 400px; // Add this line
+  padding: 50px;
+  position: relative;
+}
+
+
+.purple-bg {
+  background-color: rgb(133, 0, 235);
+  height: 400px;
+}
+
+.pink-bg{
+  background-color: rgb(255, 255, 255);
+  height: 400px;
+  min-height: 400px; // Add this line
+  padding: 50px;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .blue-bg, .red-bg, .yellow-bg, .green-bg, .purple-bg, .pink-bg {
+      height: auto;
+      min-height: 400px; // Add this line
+  }
+}
+.image-bg {
+  background-image: url('/assets/serv_01.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width: 990px) { // Small devices   
+    background-size:cover;
+    background-position: center 20%; // Move the i
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 991px) and (max-width: 1200px) { // Medium devices
+
+    background-size: contain;
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+}
+.image-bg2 {
+  background-image: url('/assets/serv_02.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  @media (max-width: 990px) { // Small devices   
+    background-size:cover;
+    background-position: center 20%; // Move the i
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 991px) and (max-width: 1200px) { // Medium devices
+
+    background-size: contain;
+    background-size: 100% 100%;
+    background-position: center center;
+  }
+}
+.outer-container {
+  padding: none; // Hide the container by default
+
+  @media (max-width: 990px) { // Small devices
+    padding: 20px; // Show the container on small devices
+    background-color: white;
+  }
+}
+
+.green-bg-h4{
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.green-bg-a-div{
+  color: black;
+}
+.green-bg-a-decoration {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color:  rgb(158, 1, 1);
+}
+.green-bg-p{
+  margin-top: 24px;
+}
+.green-bg-price{
+  margin-bottom: 24px;
+}
+.green-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/vrana-logo.png') center center no-repeat;
+  background-color:rgb(140, 139, 139);
+  opacity: 0.2; /* Adjust as needed */
+  background-size: 100%;
+}
+.pink-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/vrana-logo.png') center center no-repeat;
+  background-color:rgb(140, 139, 139);
+  opacity: 0.2; /* Adjust as needed */
+  background-size: 100%;
+}
+.green-bg-button{
+
+    width: 150px;
+    background-color: rgb(188, 31, 31);
+    border: none;
+    border-radius: 0;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 10px 20px;
+    cursor: pointer;
+    transform: translateY(2px);
+
+  .green-bg-button:hover {
+    background-color: rgb(158, 1, 1);
+    transform: translateY(-2px);
+  }
+}
+.green-bg-price-from{
+  font-weight: bolder;
+  font-size: 17px;
+
+}
+.green-bg-price-currency{
+  color: rgb(188, 31, 31);
+  font-weight: bolder;
+  margin-left: 5px;
+}
+@media (max-width: 990px) {
+  .green-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 990px) {
+  .pink-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
