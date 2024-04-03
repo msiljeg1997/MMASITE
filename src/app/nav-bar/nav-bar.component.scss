@@ -16,3 +16,15 @@
 .navbar-toggler-icon {
     filter: invert(1); 
 }
+.navbar {
+    transition: all 0.4s ease-in-out;
+    background-color: transparent;
+  
+    &.scrolled {
+      background-color: #171d29;
+  
+      .dropdown-menu {
+        background-color: #171d29;
+      }
+    }
+  }

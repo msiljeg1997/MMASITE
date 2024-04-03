@@ -358,6 +358,7 @@ color: white;
 }
 .outer-container {
   padding: none; // Hide the container by default
+  margin-top: 80px;
 
   @media (max-width: 990px) { // Small devices
     padding: 20px; // Show the container on small devices
@@ -458,4 +459,17 @@ color: white;
     align-items: center;
     text-align: center;
   }
+}
+
+/////////////////////////////////////////SECTION3 ABOUT US - BENEFITS /////////////////////{
+
+#containerFluidSection3{
+  background-color: #171d29;
+}
+#containerSection3{
+  background-color: #171d29;
+}
+
+.aboutUsP{
+  padding-top: 100px;
 }

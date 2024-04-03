@@ -11,6 +11,7 @@ export class NavBarComponent {
   isCollapsed = true;
   dropdownOpened = false;
   navbarTogglerState = false;
+  public isScrolled = false;
 
   constructor(private navbarService: NavbarService, private renderer: Renderer2) {
     this.navbarService.dropdownOpened$.subscribe(open => {
@@ -23,9 +24,9 @@ export class NavBarComponent {
 
   @HostListener('window:scroll')
   onWindowScroll() {
-    this.isCollapsed = true;
     this.navbarService.closeNavbarToggler();
     this.navbarService.closeAllDropdowns();
+    this.isScrolled = window.scrollY > 0;
   }
 
   toggleDropdown(dropdown: string) {

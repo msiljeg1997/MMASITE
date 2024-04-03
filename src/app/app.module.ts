@@ -21,7 +21,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     AppRoutingModule,
     NgbModule,
     NgbDropdownModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
 
   ],
   providers: [],
