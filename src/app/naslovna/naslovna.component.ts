@@ -31,6 +31,7 @@ export class NaslovnaComponent implements OnInit {
   zoomState: string = 'large';
   dropdownOpened$ = this.navbarService.dropdownOpened$;
   navbarTogglerState = false;
+  screenWidth: number;
 
 
   constructor(public navbarService: NavbarService) {
@@ -40,6 +41,8 @@ export class NaslovnaComponent implements OnInit {
     this.navbarService.navbarTogglerState$.subscribe(state => {
       this.navbarTogglerState = state;
     });
+    this.screenWidth = window.innerWidth;
+    window.onresize = () => { this.screenWidth = window.innerWidth; };
   }
 
   ngOnInit(): void {

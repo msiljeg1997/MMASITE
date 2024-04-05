@@ -1,109 +1,288 @@
-<section class="section1">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="position-absolute start-0 end-0 top-0 bottom-0 min-vh-100">
-                <ng-container *ngFor="let image of images; let i = index">
-                    <img [src]="image" [ngClass]="{
+<div class="container-fluid" id="overflow">
+
+
+    <section class="section1">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="position-absolute start-0 end-0 top-0 bottom-0 min-vh-100">
+                    <ng-container *ngFor="let image of images; let i = index">
+                        <img [src]="image" [ngClass]="{
                         'fade-in': i === activeIndex && pageLoaded,
                         'fade-out': i === previousIndex && pageLoaded,
                         'slider-image position-absolute start-0 top-0' : true
                       }" [@zoomOut]="i === activeIndex ? zoomState : 'large'" (@zoomOut.done)="onZoomOutEnd()"
-                        *ngIf="i === activeIndex || i === previousIndex" />
-                    <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
-                        [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
-                        <p class="firstP">Welcome To The Fight!</p>
-                        <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
-                            Martial Arts In The World</h1>
-                        <p class="secondp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. ad minim venia, </p>
-                        <button class="getStartedBtn">GET STARTED</button>
-                    </div>
-                </ng-container>
-                <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
-                    (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-                    <div class="carousel-icons carousel-iconscontainer">
-                        <ng-container *ngFor="let image of images; let i = index">
-                            <div class="carousel-icon" [ngClass]="{'active': i === activeIndex}" (click)="goToImage(i)">
-                                <div class="stripe"></div>
-                                <div class="stripe"></div>
-                                <div class="stripe"></div>
-                            </div>
-                        </ng-container>
+                            *ngIf="i === activeIndex || i === previousIndex" />
+                        <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
+                            [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
+                            <p class="firstP">Welcome To The Fight!</p>
+                            <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
+                                Martial Arts In The World</h1>
+                            <p class="secondp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
+                                tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. ad minim venia, </p>
+                            <button class="getStartedBtn">GET STARTED</button>
+                        </div>
+                    </ng-container>
+                    <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
+                        (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        <div class="carousel-icons carousel-iconscontainer">
+                            <ng-container *ngFor="let image of images; let i = index">
+                                <div class="carousel-icon" [ngClass]="{'active': i === activeIndex}"
+                                    (click)="goToImage(i)">
+                                    <div class="stripe"></div>
+                                    <div class="stripe"></div>
+                                    <div class="stripe"></div>
+                                </div>
+                            </ng-container>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- TO DOLE SLUZI ZA RAZMAK IZMEDJU SEKCIJA, VAZNO ZA SHEME! NE DIRAJ, POVEZANO SA NAV.SERVICE -> NAVBAROM -->
-<div class="rowStyle1"
-    [class.navbar-toggler-active]="navbarTogglerState && !(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()"
-    [class.dropdown-active]="(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()">
-    <div class="col-md-12">
+    </section>
+    <!-- TO DOLE SLUZI ZA RAZMAK IZMEDJU SEKCIJA, VAZNO ZA SHEME! NE DIRAJ, POVEZANO SA NAV.SERVICE -> NAVBAROM -->
+    <div class="rowStyle1"
+        [class.navbar-toggler-active]="navbarTogglerState && !(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()"
+        [class.dropdown-active]="(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()">
+        <div class="col-md-12">
 
+        </div>
     </div>
-</div>
-<div class="outer-container">
+    <div class="outer-container">
+        <div class="container-fluid" id="uniquecontainerSection2">
+            <div class="row">
+                <div class="col-lg-6 blue-bg">
+                    <div class="row">
+                        <a class="col-12 col-md-6 col-lg-6 yellow-bg image-bg">
+                            <!-- content je u scss-u -->
+                        </a>
+                        <div class="col-12 col-md-6 col-lg-6 green-bg">
+                            <a class="green-bg-a-div" style="text-decoration: none;">
+                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for
+                                    adults
+                                </h4>
+                                <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
+                                <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia,
+                                    nibh mi
+                                    ultrices felis,
+                                    ultricies. Suspendisse malesuada, diam ut mattis lacinia.</p>
+                            </a>
+                            <div class="green-bg-price">
+                                <span class="green-bg-price-from">from</span><span
+                                    class="green-bg-price-currency">$100</span>
+                            </div>
+                            <button class="green-bg-button">Procitaj više</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 red-bg">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 purple-bg image-bg2 order-1 order-md-2 order-lg-1">
+
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-6 pink-bg order-2 order-md-1 order-lg-2">
+                            <a class="green-bg-a-div" style="text-decoration: none;">
+                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for
+                                    adults
+                                </h4>
+                                <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
+                                <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia,
+                                    nibh mi
+                                    ultrices felis,
+                                    ultricies. Suspendisse malesuada, diam ut mattis lacinia.</p>
+                            </a>
+                            <div class="green-bg-price">
+                                <span class="green-bg-price-from">from</span><span
+                                    class="green-bg-price-currency">$100</span>
+                            </div>
+                            <button class="green-bg-button">Procitaj više</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" id="containerFluidSection3">
+        <div [ngClass]="screenWidth < 1200 ? 'container-fluid' : 'container'" id="containerSection3">
+            <div class="text-center">
+                <p class="aboutUsP">O nama</p>
+                <h4 class="aboutUsH4">Benefiti treniranja</h4>
+                <span href="#" style="text-decoration: none;" class="red-bg-a-decoration">-</span>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-3 mx-md-5 text-lg-start text-md-start text-small-Ws-manipulation1 red-margins-right"
+                    style="max-height: 500px;">
+                    <div class="red-header-wrapper red-margins-right">
+                        <div class="red-header-left1">
+                            <h5 class="mb-3 red-header-h5">Experienced trainers</h5>
+                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna, ut
+                                interdum.</p>
+                        </div>
+                        <div class="red-header-left1 red-margins-right">
+                            <h5 class="mb-3 red-header-h5">Large comfortable halls</h5>
+                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
+                        </div>
+                        <div class="red-header-left1 red-margins-right">
+                            <h5 class="mb-3 red-header-h5">Reasonable prices</h5>
+                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
+                                condimentum.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 px-md-3 d-none d-lg-block red-middle">
+                    <img src="/assets/boxing-glove.png" alt="" style="width: 300px;">
+                </div>
+                <div class="col-md-3 mx-md-5 text-lg-end text-md-end text-small-Ws-manipulation2"
+                    style="max-height: 500px;">
+                    <div class="red-header-wrapper  red-margins-left">
+                        <div class="red-header-right1">
+                            <h5 class="mb-3 red-header-h5">Effective workouts</h5>
+                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna,</p>
+                        </div>
+                        <div class="red-header-right1  red-margins-left">
+                            <h5 class="mb-3 red-header-h5">Individual approach</h5>
+                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
+                        </div>
+                        <div class="red-header-right1  red-margins-left">
+                            <h5 class="mb-3 red-header-h5">Professional outfit</h5>
+                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
+                                condimentum.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 blue-bg">
-                <div class="row">
-                    <a class="col-12 col-md-6 col-lg-6 yellow-bg image-bg">
-                        <!-- content je u scss-u -->
-                    </a>
-                    <div class="col-12 col-md-6 col-lg-6 green-bg">
-                        <a class="green-bg-a-div" style="text-decoration: none;">
-                            <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for adults
-                            </h4>
-                            <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
-                            <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia, nibh mi
-                                ultrices felis,
-                                ultricies. Suspendisse malesuada, diam ut mattis lacinia.</p>
-                        </a>
-                        <div class="green-bg-price">
-                            <span class="green-bg-price-from">from</span><span
-                                class="green-bg-price-currency">$100</span>
+        <div class="row rowStyle5 d-flex justify-content-center">
+            <ngb-carousel>
+                <ng-template ngbSlide>
+                    <div class="text-center testemonialDivs">
+                        <h1>Testimonial 1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="text-center testemonialDivs">
+                        <h1>Testimonial 2</h1>
+                        <p>Quisque sit amet justo sed lectus luctus vehicula.</p>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="text-center testemonialDivs">
+                        <h1>Testimonial 3</h1>
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row rowStyle6">
+            <div class="col-12 col-md-6 col-lg-3 cols-sports cols-sports1 text-center">
+                <div class=" headwrapper">
+                    <div class="icon-wrapper">
+                        <div class="modul-icon">
+                            <img src="/assets/vrana-logo-stamp.png" alt="" style="width: 100px;">
                         </div>
-                        <button class="green-bg-button">Procitaj više</button>
+                    </div>
+                    <div class="titlewrapper">
+                        <h4 class="h4-title-carousel">Mixed Martial Arts</h4>
+                    </div>
+                </div>
+                <div class="container-info info-popup " style="padding-top: 0px;">
+                    <div class="empty-cell">
+                        <div class="content-cell">
+                            <div class="description"
+                                style="color:#ffffff;font-size:14px;line-height:20px; font-weight: bolder;">
+                                Dominance proudly offers more than 17 BJJ classes every week. All classes are taught by
+                                an experienced black belt coach focusing on practicing smooth, technical training.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 red-bg">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-6 purple-bg image-bg2 order-1 order-md-2 order-lg-1">
-                        <!-- Content for the first column of the second row goes here -->
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6 pink-bg order-2 order-md-1 order-lg-2">
-                        <a class="green-bg-a-div" style="text-decoration: none;">
-                            <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for adults
-                            </h4>
-                            <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
-                            <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia, nibh mi
-                                ultrices felis,
-                                ultricies. Suspendisse malesuada, diam ut mattis lacinia.</p>
-                        </a>
-                        <div class="green-bg-price">
-                            <span class="green-bg-price-from">from</span><span
-                                class="green-bg-price-currency">$100</span>
+            <div class="col-12 col-md-6 col-lg-3 cols-sports cols-sports2 text-center">
+                <div class=" headwrapper">
+                    <div class="icon-wrapper">
+                        <div class="modul-icon">
+                            <img src="/assets/vrana-logo-stamp.png" alt="" style="width: 100px;">
                         </div>
-                        <button class="green-bg-button">Procitaj više</button>
+                    </div>
+                    <div class="titlewrapper">
+                        <h4 class="h4-title-carousel">SAMBO</h4>
+                    </div>
+                </div>
+                <div class="container-info info-popup " style="padding-top: 0px;">
+                    <div class="empty-cell">
+                        <div class="content-cell">
+                            <div class="description"
+                                style="color:#ffffff;font-size:14px;line-height:20px; font-weight: bolder;">
+                                Dominance proudly offers more than 17 BJJ classes every week. All classes are taught by
+                                an experienced black belt coach focusing on practicing smooth, technical training.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 cols-sports cols-sports3 text-center">
+                <div class=" headwrapper">
+                    <div class="icon-wrapper">
+                        <div class="modul-icon">
+                            <img src="/assets/vrana-logo-stamp.png" alt="" style="width: 100px;">
+                        </div>
+                    </div>
+                    <div class="titlewrapper">
+                        <h4 class="h4-title-carousel">COMBAT SAMBO</h4>
+                    </div>
+                </div>
+                <div class="container-info info-popup " style="padding-top: 0px;">
+                    <div class="empty-cell">
+                        <div class="content-cell">
+                            <div class="description"
+                                style="color:#ffffff;font-size:14px;line-height:20px; font-weight: bolder;">
+                                Dominance proudly offers more than 17 BJJ classes every week. All classes are taught by
+                                an experienced black belt coach focusing on practicing smooth, technical training.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 cols-sports cols-sports4 text-center">
+                <div class=" headwrapper">
+                    <div class="icon-wrapper">
+                        <div class="modul-icon">
+                            <img src="/assets/vrana-logo-stamp.png" alt="" style="width: 100px;">
+                        </div>
+                    </div>
+                    <div class="titlewrapper">
+                        <h4 class="h4-title-carousel">FITNESS</h4>
+                    </div>
+                </div>
+                <div class="container-info info-popup " style="padding-top: 0px;">
+                    <div class="empty-cell">
+                        <div class="content-cell">
+                            <div class="description"
+                                style="color:#ffffff;font-size:14px;line-height:20px; font-weight: bolder;">
+                                Dominance proudly offers more than 17 BJJ classes every week. All classes are taught by
+                                an experienced black belt coach focusing on practicing smooth, technical training.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid" id="containerFluidSection3">
-    <div class="container" id="containerSection3">
-        <div class="text-center">
-            <p class="aboutUsP">O nama</p>
-            <h4 class="aboutUsH4">Benefiti treniranja</h4>
-        </div>
-        <div class="row">
-            <div class="col-3 offset-1" style="background-color: red; height: 500px;"></div>
-            <div class="col-3 offset-1" style="background-color: green; height: 500px;"></div>
-            <div class="col-3 offset-1" style="background-color: blue; height: 500px;"></div>
-        </div>
-    </div>
+
+
+
+
+
+
+
+
+
 </div>
