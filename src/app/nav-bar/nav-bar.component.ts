@@ -1,5 +1,6 @@
 import { Component, HostListener, Renderer2 } from '@angular/core';
 import { NavbarService } from '../navbar.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,12 +14,17 @@ export class NavBarComponent {
   navbarTogglerState = false;
   public isScrolled = false;
 
-  constructor(private navbarService: NavbarService, private renderer: Renderer2) {
+  constructor(private navbarService: NavbarService, private renderer: Renderer2, private router: Router) {
     this.navbarService.dropdownOpened$.subscribe(open => {
       console.log('Dropdown opened1:', open);
     });
     this.navbarService.navbarTogglerState$.subscribe(state => {
       this.navbarTogglerState = state;
+    });
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isScrolled = event.url === '/contact';
+      }
     });
   }
 

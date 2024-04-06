@@ -7,13 +7,13 @@ import { NavbarService } from '../navbar.service';
   templateUrl: './naslovna.component.html',
   styleUrls: ['./naslovna.component.scss'],
   animations: [
-    trigger('zoomOut', [
-      transition('void => *', [
-        style({ transform: 'scale(1.05)' }),
-        animate('1000ms', style({ transform: 'scale(1.05)' })), // delay of 1 second
-        animate('8000ms ease-in-out', style({ transform: 'scale(1)' })) // zoom out over 8 seconds
-      ])
-    ])
+    // trigger('zoomOut', [
+    //   transition('void => *', [
+    //     style({ transform: 'scale(1.05)' }),
+    //     animate('1000ms', style({ transform: 'scale(1.05)' })), // delay of 1 second
+    //     animate('8000ms ease-in-out', style({ transform: 'scale(1)' })) // zoom out over 8 seconds
+    //   ])
+    // ])
   ]
 })
 export class NaslovnaComponent implements OnInit {

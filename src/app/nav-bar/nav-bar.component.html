@@ -11,7 +11,7 @@
             <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul ngbNav #nav="ngbNav" [activeId]="1" class="navbar-nav">
                     <li [ngbNavItem]="1">
-                        <button ngbNavLink class="nav-link-color"><b>NASLOVNA</b></button>
+                        <button ngbNavLink class="nav-link-color" routerLink="/"><b>NASLOVNA</b></button>
                     </li>
                     <li [ngbNavItem]="2">
                         <button ngbNavLink class="nav-link-color"><b>O NAMA</b></button>
@@ -39,6 +39,9 @@
                     </li>
                     <li [ngbNavItem]="5">
                         <button ngbNavLink class="nav-link-color"><b>NOVOSTI</b></button>
+                    </li>
+                    <li [ngbNavItem]="5">
+                        <button ngbNavLink class="nav-link-color" routerLink="/contact"><b>KONTAKT</b></button>
                     </li>
                 </ul>
             </div>

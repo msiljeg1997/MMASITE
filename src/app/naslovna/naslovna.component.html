@@ -10,8 +10,7 @@
                         'fade-in': i === activeIndex && pageLoaded,
                         'fade-out': i === previousIndex && pageLoaded,
                         'slider-image position-absolute start-0 top-0' : true
-                      }" [@zoomOut]="i === activeIndex ? zoomState : 'large'" (@zoomOut.done)="onZoomOutEnd()"
-                            *ngIf="i === activeIndex || i === previousIndex" />
+                      }" *ngIf="i === activeIndex || i === previousIndex" />
                         <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
                             [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
                             <p class="firstP">Welcome To The Fight!</p>
