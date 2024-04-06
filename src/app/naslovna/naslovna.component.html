@@ -104,60 +104,6 @@
             </div>
         </div>
     </div>
-    <!-- ABOUT SECTION BENEFITS -->
-    <div class="container-fluid" id="containerFluidSection3">
-        <div [ngClass]="screenWidth < 1200 ? 'container-fluid' : 'container'" id="containerSection3">
-            <div class="text-center">
-                <p class="aboutUsP">O nama</p>
-                <h4 class="aboutUsH4">Benefiti treniranja</h4>
-                <span href="#" style="text-decoration: none;" class="red-bg-a-decoration">-</span>
-            </div>
-            <div class="row d-flex justify-content-center align-items-center">
-                <div class="col-md-3 mx-md-5 text-lg-start text-md-start text-small-Ws-manipulation1 red-margins-right"
-                    style="max-height: 500px;">
-                    <div class="red-header-wrapper red-margins-right">
-                        <div class="red-header-left1">
-                            <h5 class="mb-3 red-header-h5">Experienced trainers</h5>
-                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna, ut
-                                interdum.</p>
-                        </div>
-                        <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5">Large comfortable halls</h5>
-                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
-                        </div>
-                        <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5">Reasonable prices</h5>
-                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
-                                condimentum.</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-3 px-md-3 d-none d-lg-block red-middle">
-                    <img src="/assets/boxing-glove.png" alt="" style="width: 300px;">
-                </div>
-                <div class="col-md-3 mx-md-5 text-lg-end text-md-end text-small-Ws-manipulation2"
-                    style="max-height: 500px;">
-                    <div class="red-header-wrapper  red-margins-left">
-                        <div class="red-header-right1">
-                            <h5 class="mb-3 red-header-h5">Effective workouts</h5>
-                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna,</p>
-                        </div>
-                        <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5">Individual approach</h5>
-                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
-                        </div>
-                        <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5">Professional outfit</h5>
-                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
-                                condimentum.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- TESTEMONIALS SECTION -->
     <div class="container-fluid">
         <div class="row rowStyle5 d-flex justify-content-center">
@@ -184,7 +130,7 @@
         </div>
     </div>
     <!-- SPORTOVI SECTION -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="sectionSportovi">
         <div class="row rowStyle6">
             <div class="col-12 col-md-6 col-lg-3 cols-sports cols-sports1 text-center">
                 <div class=" headwrapper">
@@ -286,13 +232,82 @@
         <div class="parallaxcontainer">
         </div>
     </div>
+    <!-- ABOUT SECTION BENEFITS -->
+    <div class="container-fluid" id="containerFluidSection3">
+        <div [ngClass]="screenWidth < 1200 ? 'container-fluid' : 'container'" id="containerSection3">
+            <div class="text-center">
+                <p class="aboutUsP">O nama</p>
+                <h4 class="aboutUsH4">Benefiti treniranja</h4>
+                <span href="#" style="text-decoration: none;" class="red-bg-a-decoration">-</span>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center aboutUsRow">
+                <div class="col-md-3 mx-md-5 text-lg-start text-md-start text-small-Ws-manipulation1 red-margins-right"
+                    style="max-height: 500px;">
+                    <div class="red-header-wrapper red-margins-right">
+                        <div class="red-header-left1">
+                            <h5 class="mb-3 red-header-h5">Experienced trainers</h5>
+                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna, ut
+                                interdum.</p>
+                        </div>
+                        <div class="red-header-left1 red-margins-right">
+                            <h5 class="mb-3 red-header-h5">Large comfortable halls</h5>
+                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
+                        </div>
+                        <div class="red-header-left1 red-margins-right">
+                            <h5 class="mb-3 red-header-h5">Reasonable prices</h5>
+                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
+                                condimentum.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 px-md-3 d-none d-lg-block red-middle">
+                    <img src="/assets/boxing-glove.png" alt="" style="width: 300px;">
+                </div>
+                <div class="col-md-3 mx-md-5 text-lg-end text-md-end text-small-Ws-manipulation2"
+                    style="max-height: 500px;">
+                    <div class="red-header-wrapper  red-margins-left">
+                        <div class="red-header-right1">
+                            <h5 class="mb-3 red-header-h5">Effective workouts</h5>
+                            <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna,</p>
+                        </div>
+                        <div class="red-header-right1  red-margins-left">
+                            <h5 class="mb-3 red-header-h5">Individual approach</h5>
+                            <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
+                        </div>
+                        <div class="red-header-right1  red-margins-left">
+                            <h5 class="mb-3 red-header-h5">Professional outfit</h5>
+                            <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
+                                condimentum.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SPONZORI -->
+
+
+    <div class="container-fluid" id="containerSponzori">
+        <div class="row rowStyle7">
+            <div class="col-md-6 sponsor-image">
+                <img src="/assets/mma_savez_part.jpg" alt="Sponsor 1">
+            </div>
+            <div class="col-md-6 sponsor-image">
+                <img src="/assets/sambo_savez_part.jpg" alt=" Sponsor 2">
+            </div>
+        </div>
+    </div>
+
+
     <!-- FORMA SECTION -->
 
     <div class="container-fluid" id="formaContainerFluid">
         <div class="container" id="formcontainer">
             <h1 class="h1form text-center mb-5">Contact Us for a free Quote</h1>
             <form>
-                <div class="row">
+                <div class="row rowStyle8">
                     <div class="form-group col-md-6 col-sm-12">
                         <input type="text" class="form-control" id="name" placeholder="Name">
                     </div>
@@ -310,6 +325,9 @@
             </form>
         </div>
     </div>
+
+
+
 
 
 

@@ -472,8 +472,11 @@ color: white;
 
 /////////////////////////////////////////SECTION3 ABOUT US - BENEFITS /////////////////////{
 
+  .aboutUsRow{
+    padding-bottom: 50px;
+  }
 #containerFluidSection3{
-  background-color: #171d29;
+  background-color: #000000;
 min-height: 800px;
 @media (max-width: 1200px) {
   max-height: 500px;
@@ -486,7 +489,7 @@ min-height: 800px;
 }
 }
 #containerSection3{
-  background-color: #171d29;
+  background-color: #000000;
 }
 
 
@@ -529,7 +532,7 @@ height: 500px;
   color: whitesmoke;
 }
 .aboutUsP{
-  padding-top: 100px;
+  padding-top: 50px;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bolder;
@@ -570,7 +573,7 @@ background-color: #000000 !important;
 ///section 5////
 
 .rowStyle6{
- margin-bottom: 100px;
+margin-bottom: 50px;
 }
 .cols-sports{
   height: 350px;
@@ -631,7 +634,7 @@ background-size: cover;
 .parallaxcontainer {
   width: 100vw;
   height: 500px;
-  background-image: url("/assets/samboParalax.jpg");
+  background-image: url("/assets/samoParalax (2).png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -647,7 +650,7 @@ background-size: cover;
 /// FORMA ////
 
 #formaContainerFluid{
-  background-color: #171d29;
+background-color: #000000b2;
 }
 
 #formcontainer{
@@ -682,6 +685,9 @@ input[type="text"], input[type="email"], textarea {
 #message {
   height: 100px;
 }
+#name, #email, #message, #subject {
+  background-color: black;
+}
 .submitgumb{
   margin-top: 20px;
   display: block;
@@ -695,4 +701,32 @@ input[type="text"], input[type="email"], textarea {
   border: none;
   cursor: pointer;
   border-radius: 0px;
+}
+//SPONZORI//
+
+#containerSponzori{
+  background-color: rgb(255, 255, 255);
+  padding-left: 0;
+  padding-right: 0;
+}
+.rowStyle7{
+  min-height: 200px;
+}
+.glavniCol{
+  background-color: rgb(255, 255, 255);
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//SPONZORI//
+
+.sponsor-image {
+  text-align: center;
+
+  img {
+    max-width: 60%;
+    height: auto;
+  }
 }
