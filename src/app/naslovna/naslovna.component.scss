@@ -771,3 +771,28 @@ input[type="text"], input[type="email"], textarea {
 .text-wrapper-h4, .text-wrapper-p{
   color: whitesmoke;
 }
+.green-bg-button2{
+
+  width: 200px;
+  background-color: rgb(188, 31, 31);
+  border: none;
+  border-radius: 0;
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  padding: 10px 20px;
+  cursor: pointer;
+  transform: translateY(2px);
+  margin-left: 10px;
+  margin-right: 10px;
+
+  background: linear-gradient(to right, black 50%, rgb(188, 31, 31) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 1s ease;
+
+  &:hover {
+    background-position: left bottom;
+  }
+}

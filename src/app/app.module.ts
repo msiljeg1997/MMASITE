@@ -14,6 +14,7 @@ import { SamboComponent } from './sambo/sambo.component';
 import { CombatSamboComponent } from './combat-sambo/combat-sambo.component';
 import { FitnessComponent } from './fitness/fitness.component';
 import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
+import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
     SamboComponent,
     CombatSamboComponent,
     FitnessComponent,
-    ZaOdrasleComponent
+    ZaOdrasleComponent,
+    ZaDjecuComponent
   ],
   imports: [
     BrowserModule,
