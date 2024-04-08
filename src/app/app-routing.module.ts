@@ -7,6 +7,7 @@ import { SamboComponent } from './sambo/sambo.component';
 import { CombatSamboComponent } from './combat-sambo/combat-sambo.component';
 import { FitnessComponent } from './fitness/fitness.component';
 import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
+import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'sambo', component: SamboComponent },
   { path: 'combat_sambo', component: CombatSamboComponent },
   { path: 'fitness', component: FitnessComponent },
-  { path: 'za_odrasle', component: ZaOdrasleComponent }
+  { path: 'za_odrasle', component: ZaOdrasleComponent },
+  { path: 'za-djecu', component: ZaDjecuComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
