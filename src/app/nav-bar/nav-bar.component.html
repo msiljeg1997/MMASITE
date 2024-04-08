@@ -20,10 +20,10 @@
                         <button type="button" class="nav-link nav-link-color" ngbDropdownToggle
                             (click)="toggleDropdown('sportovi')"><b>SPORTOVI</b></button>
                         <div ngbDropdownMenu>
-                            <button ngbDropdownItem>MMA</button>
-                            <button ngbDropdownItem>COMBAT SAMBO</button>
-                            <button ngbDropdownItem>SAMBO</button>
-                            <button ngbDropdownItem>FITNESS</button>
+                            <button ngbDropdownItem routerLink="/mma">MMA</button>
+                            <button ngbDropdownItem routerLink="/combat_sambo">COMBAT SAMBO</button>
+                            <button ngbDropdownItem routerLink="/sambo">SAMBO</button>
+                            <button ngbDropdownItem routerLink="/fitness">FITNESS</button>
                         </div>
                     </li>
                     <li ngbDropdown class="nav-item" role="presentation">
@@ -31,7 +31,7 @@
                             (click)="toggleDropdown('programi')"><b>PROGRAMI</b></button>
                         <div ngbDropdownMenu>
                             <button ngbDropdownItem>ZA DJECU</button>
-                            <button ngbDropdownItem>ZA ODRASLE</button>
+                            <button ngbDropdownItem routerLink="/za_odrasle">ZA ODRASLE</button>
                             <div class="dropdown-divider"></div>
                             <button ngbDropdownItem>PRIVATNI TRENINZI</button>
                             <button ngbDropdownItem>ONLINE TRENINZI</button>

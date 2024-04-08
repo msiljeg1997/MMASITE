@@ -733,3 +733,41 @@ input[type="text"], input[type="email"], textarea {
     height: auto;
   }
 }
+
+
+//FORM2
+
+
+.form-custom {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-custom .form-control {
+  background-color: #333;
+  border-color: #ff0000;
+  color: #fff;
+}
+
+.form-custom .form-control:focus {
+  background-color: #333;
+  border-color: #ff0000;
+  color: #fff;
+  box-shadow: none;
+}
+
+.form-custom .btn {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+
+.form-custom .btn:hover {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+//BURAZ
+
+.text-wrapper-h4, .text-wrapper-p{
+  color: whitesmoke;
+}

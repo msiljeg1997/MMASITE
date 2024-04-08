@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { MmaComponent } from './mma/mma.component';
+import { SamboComponent } from './sambo/sambo.component';
+import { CombatSamboComponent } from './combat-sambo/combat-sambo.component';
+import { FitnessComponent } from './fitness/fitness.component';
+import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { ContactComponent } from './contact/contact.component';
     NavBarComponent,
     HomepageComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    MmaComponent,
+    SamboComponent,
+    CombatSamboComponent,
+    FitnessComponent,
+    ZaOdrasleComponent
   ],
   imports: [
     BrowserModule,

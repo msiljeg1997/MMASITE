@@ -1,0 +1,91 @@
+//// SECTION 4 /////
+
+
+
+
+.rowStyle5{
+    min-height: 300px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .testemonialDivs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #000000 !important;
+    color: white;
+  }
+  .ngb-carousel .carousel-item {
+    margin: 0 !important;
+  }
+  ///section 5////
+  
+  .rowStyle6{
+  margin-bottom: 50px;
+  }
+  .cols-sports{
+    height: 350px;
+  }
+  .cols-sports1{
+    background-image: url('/assets/sp_01.jpg');
+  background-position: center;
+  background-size: cover;
+  }
+  .cols-sports2{
+    background-image: url('/assets/sp_02.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .cols-sports3{
+    background-image: url('/assets/sp_03.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .cols-sports4{
+    background-image: url('/assets/sp_04.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  .h4-title-carousel{
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .icon-wrapper {
+    padding-top: 100px;
+  
+    @media (min-width: 2250px) {
+      padding-top: 110px;
+    }
+  }
+  .info-popup {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    transform: translateY(100%) !important;
+    transition: visibility 0s, opacity 0.3s linear, transform 0.3s ease;
+  
+  }
+  
+  .headwrapper {
+    transition: transform 0.3s ease;
+  }
+  
+  .cols-sports:hover .headwrapper {
+    transform: translateY(-50px); /* moves the headwrapper up by 30px on hover */
+  }
+  
+  .cols-sports:hover .info-popup {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(calc(100% - 90px)) !important; /* moves the info-popup up by an additional 30px on hover */
+  }
+  #sectionUpperPhoto{
+    height: 300px;
+    background-image: url('/assets/slide_02-tinted.png');
+    background-size: cover;
+    background-position: center center;
+  
+}
