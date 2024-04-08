@@ -40,6 +40,7 @@ import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
     BrowserAnimationsModule,
 
 
+
   ],
   providers: [],
   bootstrap: [AppComponent]

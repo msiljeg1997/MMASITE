@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ContactComponent } from './contact/contact.component';
 import { MmaComponent } from './mma/mma.component';
@@ -19,8 +19,12 @@ const routes: Routes = [
   { path: 'za_odrasle', component: ZaOdrasleComponent },
   { path: 'za-djecu', component: ZaDjecuComponent },
 ];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'top',
+};
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
