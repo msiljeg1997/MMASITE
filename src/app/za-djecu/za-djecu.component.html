@@ -1,1 +1,130 @@
-<p>za-djecu works!</p>
+<div class="container-fluid" id="sectionUpperPhoto">
+    <div class="row">
+        <div class="picture">
+            <div class="text-wrapper">
+                <h1 class="text-center">MMA</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <div class="container" id="containerUnique">
+        <div class="row justify-content-center gap-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 element"></div>
+            <div class="col-lg-3 col-md-6 col-sm-12 element"></div>
+        </div>
+    </div>
+    <div class="container container2 pb-5">
+        <h1 class="text">Kids Krav Maga (od 5 do 10 godina starosti)</h1>
+        <p class="text">Krav maga trening temelji se na igri kao temelju učenja, što znači da sve vježbe za razvoj
+            dječjeg mozga
+            provodimo kroz neopterećenu atmosferu i dinamične zadatke. Upravo ovakav pristup pokazuje sjajne rezultate u
+            napretku razvoja i usvajanju novih vještina. Kroz trening za našu najmanju skupinu:</p>
+        <ul>
+            <li class="text">razvijamo timski rad i ranu socijalizaciju</li>
+            <li class="text">usvajamo zdrave životne navike i disciplinu</li>
+            <li class="text">razvijamo koncentraciju i fokus</li>
+            <li class="text">utječemo na motorički razvoj i rast djeteta</li>
+            <li class="text">učimo samoobranu: kako prepoznati, spriječiti i neutralizirati konflikte</li>
+            <li class="text">osnažujemo samopouzdanje</li>
+        </ul>
+    </div>
+    <div class="container mt-5">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="/assets/sp_01.jpg" alt="First slide">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="/assets/sp_02.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="container container2 pt-5">
+        <h1 class="text">Teens Krav Maga (od 11 do 15 godina starosti)</h1>
+        <p class="text">Treninzi za ovu dob temeljeni su na pristupu trening kao strategija odrastanja, to znači da je
+            program
+            prilagođen dinamičnom razdoblju odrastanja, a kroz naš pristup želimo tinejdžerima omogućiti timsko
+            okruženje koje pruža razumijevanje i podršku, usmjerava njihov razvoj i podupire ciljeve. Na treningu:</p>
+        <ul>
+            <li class="text">razvijamo disciplinu, fokus i koncentraciju</li>
+            <li class="text">popravljamo kondiciju, snagu, koordinaciju i fizičku spremnost</li>
+            <li class="text">učimo tehnike samoobrane primjerene problematici s kojom se susreću u toj dobi</li>
+            <li class="text">razvijamo samopouzdanje</li>
+            <li class="text">utječemo na razvoj osjećaja za bližnje, timski rad te suočavanje s izazovima socijalnog
+                okruženja</li>
+        </ul>
+    </div>
+    <div class="container mt-5 mb-5">
+        <ngb-carousel>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="/assets/sp_01.jpg" alt="First slide">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="/assets/sp_02.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="container-fluid mb-5">
+        <div class="container">
+            <h2 class="text-center text-white mt-5 mb-5">ISPUNITE OBRAZAC ZA <span
+                    style="color: rgb(210, 24, 24);">PRIJAVU</span></h2>
+            <form class="form-custom bg-dark text-white p-3  border border-danger">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control bg-dark text-white border-danger" id="fullName"
+                        placeholder="Enter Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control bg-dark text-white border-danger" id="email"
+                        placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="tel" class="form-control bg-dark text-white border-danger" id="contactNumber"
+                        placeholder="Enter Contact Number">
+                </div>
+                <div class="form-group">
+                    <label for="sport">Choose a Sport</label>
+                    <select class="form-control bg-dark text-white border-danger" id="sport">
+                        <option selected="selected" disabled="disabled"></option>
+                        <option>MMA</option>
+                        <option>SAMBO</option>
+                        <option>COMBAT SAMBO</option>
+                        <option>FITNESS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select class="form-control bg-dark text-white border-danger" id="type">
+                        <option selected="selected" disabled="disabled"></option>
+                        <option>Online</option>
+                        <option>Private</option>
+                    </select>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-danger mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>

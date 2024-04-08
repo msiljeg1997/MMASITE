@@ -35,27 +35,32 @@ color: whitesmoke;
 .form-custom {
     max-width: 600px;
     margin: 0 auto;
-}
-
-.form-custom .form-control {
+  }
+  
+  .form-custom .form-control {
     background-color: #333;
-    border-color: #ff0000;
+    border: none;
+    border-bottom: 1px solid #ff0000;
+    border-radius: 0;
     color: #fff;
-}
-
-.form-custom .form-control:focus {
+  }
+  
+  .form-custom .form-control:focus {
     background-color: #333;
-    border-color: #ff0000;
+    border: none;
+    border-bottom: 1px solid #ff0000;
+    border-radius: 0;
     color: #fff;
     box-shadow: none;
-}
-
-.form-custom .btn {
+  }
+  
+  .form-custom .btn {
     background-color: #ff0000;
     border-color: #ff0000;
-}
-
-.form-custom .btn:hover {
+  }
+  
+  .form-custom .btn:hover {
     background-color: #cc0000;
     border-color: #cc0000;
-}
+  }
+  

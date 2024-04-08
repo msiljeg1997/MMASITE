@@ -652,59 +652,59 @@ background-size: cover;
 
 /// FORMA ////
 
-#formaContainerFluid{
-background-color: #000000b2;
-}
+// #formaContainerFluid{
+// background-color: #000000b2;
+// }
 
-#formcontainer{
-  padding: 50px;
-  max-width: 800px;  // Change this line
-  width: 100%; 
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 30px;
-}
-input[type="text"], input[type="email"], textarea {
-  border: none;
-  border-bottom: 1px solid #0f94f36c;
-  outline: none;
-  border-radius: 0;
-  color: #c9c9b6;
-}
+// #formcontainer{
+//   padding: 50px;
+//   max-width: 800px;  // Change this line
+//   width: 100%; 
+//   color: #ffffff;
+//   text-transform: uppercase;
+//   font-weight: bolder;
+//   font-size: 30px;
+// }
+// input[type="text"], input[type="email"], textarea {
+//   border: none;
+//   border-bottom: 1px solid #0f94f36c;
+//   outline: none;
+//   border-radius: 0;
+//   color: #c9c9b6;
+// }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #c9c9b6;
-  opacity: 1; /* Firefox */
-}
+// ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+//   color: #c9c9b6;
+//   opacity: 1; /* Firefox */
+// }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #0f94f36c;
-}
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */
+//   color: #0f94f36c;
+// }
 
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: #0f94f36c;
-}
-#message {
-  height: 100px;
-}
-#name, #email, #message, #subject {
-  background-color: black;
-}
-.submitgumb{
-  margin-top: 20px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #c9c9b6;
-  color: white;
-  font-weight: bold;
-  width: 150px;
-  height: 50px;
-  border: none;
-  cursor: pointer;
-  border-radius: 0px;
-}
+// ::-ms-input-placeholder { /* Microsoft Edge */
+//   color: #0f94f36c;
+// }
+// #message {
+//   height: 100px;
+// }
+// #name, #email, #message, #subject {
+//   background-color: black;
+// }
+// .submitgumb{
+//   margin-top: 20px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   background-color: #c9c9b6;
+//   color: white;
+//   font-weight: bold;
+//   width: 150px;
+//   height: 50px;
+//   border: none;
+//   cursor: pointer;
+//   border-radius: 0px;
+// }
 //SPONZORI//
 
 #containerSponzori{
@@ -745,13 +745,17 @@ input[type="text"], input[type="email"], textarea {
 
 .form-custom .form-control {
   background-color: #333;
-  border-color: #ff0000;
+  border: none;
+  border-bottom: 1px solid #ff0000;
+  border-radius: 0;
   color: #fff;
 }
 
 .form-custom .form-control:focus {
   background-color: #333;
-  border-color: #ff0000;
+  border: none;
+  border-bottom: 1px solid #ff0000;
+  border-radius: 0;
   color: #fff;
   box-shadow: none;
 }
@@ -765,6 +769,7 @@ input[type="text"], input[type="email"], textarea {
   background-color: #cc0000;
   border-color: #cc0000;
 }
+
 
 //BURAZ
 

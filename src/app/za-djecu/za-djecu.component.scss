@@ -1,0 +1,61 @@
+.element{
+    background-image: url('/assets/sp_01.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+}
+#containerUnique{
+    min-height: 500px;
+}
+#sectionUpperPhoto{
+    height: 300px;
+    background-image: url('/assets/slide_02-tinted.png');
+    background-size: cover;
+    background-position: center center;
+  
+}
+.container2{
+    max-width: 1000px;
+}
+.text{
+    color: whitesmoke;
+}
+
+
+
+//FORM2
+
+
+.form-custom {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-custom .form-control {
+    background-color: #333;
+    border: none;
+    border-bottom: 1px solid #ff0000;
+    border-radius: 0;
+    color: #fff;
+  }
+  
+  .form-custom .form-control:focus {
+    background-color: #333;
+    border: none;
+    border-bottom: 1px solid #ff0000;
+    border-radius: 0;
+    color: #fff;
+    box-shadow: none;
+  }
+  
+  .form-custom .btn {
+    background-color: #ff0000;
+    border-color: #ff0000;
+  }
+  
+  .form-custom .btn:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+  }
+  
+  
