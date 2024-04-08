@@ -229,14 +229,15 @@ img {
 @media (max-width: 580px) {
   .text-wrapperKlasa {
       margin: 20px;
-      width: 350px;
+      width: 330px;
+
   }
 }
 @media (max-width: 375px) {
   .text-wrapperKlasa {
       margin: 20px;
-      width: 250px;
-      transform: translate(calc(50% - 45%), -130px);
+      width: 290px;
+      transform: translateY(-250px);
   }
 }
 //da dropdown na mobile gurne tekst na dole isto dio navbar service i navbar.ts i html-bundle. !! VAZNO
