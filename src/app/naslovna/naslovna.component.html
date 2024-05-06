@@ -4,7 +4,7 @@
     <section class="section1">
         <div class="row">
             <div class="col-md-12">
-                <div class="position-absolute start-0 end-0 top-0 bottom-0 min-vh-100">
+                <div class="position-absolute start-0 end-0 top-0 bottom-0 pozicija">
                     <ng-container *ngFor="let image of images; let i = index">
                         <img [src]="image" [ngClass]="{
                         'fade-in': i === activeIndex && pageLoaded,
@@ -14,7 +14,7 @@
                         <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
                             [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
                             <p class="firstP">Dobrodošli u Crows</p>
-                            <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se rađaju
+                            <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se <br> rađaju
                                 </span>prvaci</h1>
                             <p class="secondp">Treniraj s pionirima Samba i MMA sporta u Hrvatskoj.</p>
                             <button class="getStartedBtn">PRIDRUŽI SE</button>

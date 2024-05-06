@@ -2,6 +2,14 @@
   max-width: 100vw;
   overflow: hidden;
 }
+.pozicija{
+  min-height: 100vh;
+}
+@media (max-width: 600px) {
+  .pozicija {
+      min-height: 60vh;
+  }
+}
 .section1 {
   position: relative;
   top: 0;
@@ -223,13 +231,14 @@ img {
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -110px);
+      transform: translate(calc(50% - 45%), -90px);
   }
 }
 @media (max-width: 580px) {
   .text-wrapperKlasa {
       margin: 20px;
       width: 330px;
+      transform: translate(calc(50% - 45%), -70px);
 
   }
 }
@@ -237,7 +246,7 @@ img {
   .text-wrapperKlasa {
       margin: 20px;
       width: 290px;
-      transform: translateY(-250px);
+      transform: translateY(-90px);
   }
 }
 //da dropdown na mobile gurne tekst na dole isto dio navbar service i navbar.ts i html-bundle. !! VAZNO
@@ -269,17 +278,23 @@ color: white;
   border: none;
   border-radius: 0;
   color: white;
-  font-size: 16px;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: bolder;
   padding: 10px 20px;
   cursor: pointer;
   transform: translateY(2px);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.getStartedBtn:hover {
-  background-color: rgb(158, 1, 1);
-  transform: translateY(-2px);
+  position: relative;
+  z-index: 100;
+
+  background: linear-gradient(to right, black 50%, rgb(188, 31, 31) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 1s ease;
+
+  &:hover {
+    background-position: left bottom;
+  }
 }
 
 /////SECTION1 TRANSITION JAKO POVEZANO SA NAVBAROM TAKO DA AKO KOPIRAS KOPIRAJ NAV SERVICE I CJELI NAV.TS I HTML- BUNDLE/// 
@@ -288,6 +303,12 @@ color: white;
   background-color: rgb(0, 0, 0);
   margin-top: 85vh;
 }
+@media (max-width: 600px) {
+  .rowStyle1 {
+   margin-top: 45vh;
+  }
+}
+
 .rowStyle1.navbar-toggler-active {
   margin-top: 55vh;
 }
