@@ -13,14 +13,11 @@
                       }" *ngIf="i === activeIndex || i === previousIndex" />
                         <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
                             [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
-                            <p class="firstP">Welcome To The Fight!</p>
-                            <h1 class="firstH1">The Best <span style="color: rgb(188, 31, 31);">Boxing </span>School and
-                                Martial Arts In The World</h1>
-                            <p class="secondp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
-                                tempor
-                                incididunt ut
-                                labore et dolore magna aliqua. ad minim venia, </p>
-                            <button class="getStartedBtn">GET STARTED</button>
+                            <p class="firstP">Dobrodošli u Crows</p>
+                            <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se rađaju
+                                </span>prvaci</h1>
+                            <p class="secondp">Treniraj s pionirima Samba i MMA sporta u Hrvatskoj.</p>
+                            <button class="getStartedBtn">PRIDRUŽI SE</button>
                         </div>
                     </ng-container>
                     <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
@@ -59,8 +56,8 @@
                         </a>
                         <div class="col-12 col-md-6 col-lg-6 green-bg">
                             <a class="green-bg-a-div" style="text-decoration: none;">
-                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for
-                                    adults
+                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Treninzi</span><br>za
+                                    djecu
                                 </h4>
                                 <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
                                 <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia,
@@ -83,8 +80,8 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-6 pink-bg order-2 order-md-1 order-lg-2">
                             <a class="green-bg-a-div" style="text-decoration: none;">
-                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Boxing</span><br>for
-                                    adults
+                                <h4 class="green-bg-h4"><span style="color: rgb(188, 31, 31);">Treninzi</span><br>Za
+                                    odrasle
                                 </h4>
                                 <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
                                 <p class="green-bg-p">Nulla facilisi. Suspendisse malesuada, diam ut mattis lacinia,
@@ -288,16 +285,16 @@
                     style="max-height: 500px;">
                     <div class="red-header-wrapper red-margins-right">
                         <div class="red-header-left1">
-                            <h5 class="mb-3 red-header-h5">Experienced trainers</h5>
+                            <h5 class="mb-3 red-header-h5">Fizička kondicija</h5>
                             <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna, ut
                                 interdum.</p>
                         </div>
                         <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5">Large comfortable halls</h5>
+                            <h5 class="mb-3 red-header-h5">Samoobrana</h5>
                             <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
                         </div>
                         <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5">Reasonable prices</h5>
+                            <h5 class="mb-3 red-header-h5">Samopouzdanje</h5>
                             <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
                                 condimentum.</p>
                         </div>
@@ -311,15 +308,15 @@
                     style="max-height: 500px;">
                     <div class="red-header-wrapper  red-margins-left">
                         <div class="red-header-right1">
-                            <h5 class="mb-3 red-header-h5">Effective workouts</h5>
+                            <h5 class="mb-3 red-header-h5">Disciplina</h5>
                             <p class="mb-3 red-header-p">Sed sed condimentum massa. Morbi auctor vestibulum urna,</p>
                         </div>
                         <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5">Individual approach</h5>
+                            <h5 class="mb-3 red-header-h5">Oslobađanje stresa</h5>
                             <p class="mb-3 red-header-p">Morbi auctor vestibulum urna, ut interdum ipsum maximus et.</p>
                         </div>
                         <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5">Professional outfit</h5>
+                            <h5 class="mb-3 red-header-h5">Timski rad i prijateljstvo</h5>
                             <p class="mb-3 red-header-p">Vestibulum urna, ut interdum ipsum maximus et. Sed sed
                                 condimentum.</p>
                         </div>
@@ -342,9 +339,9 @@
                     style="color: rgb(210, 24, 24);">PRIJAVU</span></h2>
             <form class="form-custom bg-dark text-white p-3  border border-danger">
                 <div class="form-group">
-                    <label for="fullName">Full Name</label>
+                    <label for="fullName">Ime i prezime</label>
                     <input type="text" class="form-control bg-dark text-white border-danger" id="fullName"
-                        placeholder="Enter Full Name">
+                        placeholder="Ime i prezime">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -352,12 +349,12 @@
                         placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <label for="contactNumber">Contact Number</label>
+                    <label for="contactNumber">Kontakt broj</label>
                     <input type="tel" class="form-control bg-dark text-white border-danger" id="contactNumber"
-                        placeholder="Enter Contact Number">
+                        placeholder="Kontakt broj">
                 </div>
                 <div class="form-group">
-                    <label for="sport">Choose a Sport</label>
+                    <label for="sport">Odaberi sport</label>
                     <select class="form-control bg-dark text-white border-danger" id="sport">
                         <option selected="selected" disabled="disabled"></option>
                         <option>MMA</option>

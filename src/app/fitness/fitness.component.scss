@@ -110,4 +110,14 @@ color: whitesmoke;
     background-color: #cc0000;
     border-color: #cc0000;
   }
-  
+  .text-wrapper-p-fix-mobile1 {
+    @media (max-width: 1200px) {
+        margin-bottom: 50px !important;
+    }
+}
+.text-wrapper-p-fix-mobile2 {
+    @media (max-width: 1200px) {
+        margin-top: -50px !important;
+        margin-bottom: 40px !important;
+    }
+}

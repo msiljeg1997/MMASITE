@@ -1,11 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mma',
   templateUrl: './mma.component.html',
   styleUrls: ['./mma.component.scss']
 })
-export class MmaComponent {
+export class MmaComponent implements OnInit{
   backgroundSize: string = '980px';
   isMobile = window.innerWidth < 450;
 
