@@ -17,6 +17,7 @@ import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
 import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
 import { OnlineComponent } from './online/online.component';
 import { IndividualniComponent } from './individualni/individualni.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { IndividualniComponent } from './individualni/individualni.component';
     ZaOdrasleComponent,
     ZaDjecuComponent,
     OnlineComponent,
-    IndividualniComponent
+    IndividualniComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
