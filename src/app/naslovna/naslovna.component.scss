@@ -296,6 +296,7 @@ color: white;
   background-color: rgb(0, 0, 0);
 }
 
+
 //SECTION2 grid
 .yellow-bg {
   height: 400px;
@@ -431,6 +432,8 @@ color: white;
     padding: 10px 20px;
     cursor: pointer;
     transform: translateY(2px);
+    position: relative;
+    z-index: 100;
 
     background: linear-gradient(to right, black 50%, rgb(188, 31, 31) 50%);
     background-size: 200% 100%;
@@ -565,6 +568,7 @@ align-items: center;
 height: 300px;
 background-color: #000000 !important;
   color: white;
+  z-index: 55;
 }
 .ngb-carousel .carousel-item {
   margin: 0 !important;
@@ -797,6 +801,7 @@ background-size: cover;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 1s ease;
+
 
   &:hover {
     background-position: left bottom;
