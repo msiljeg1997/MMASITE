@@ -7,11 +7,7 @@
 }
 
 .section_slika_services {
-    height: 300px;
-    background-image: url("/assets/dubinsko.jpeg");
-    @media (max-width: 450px) {
-        height: 220px;
-    }
+    height: 100px;
 }
 
 
@@ -38,7 +34,9 @@
         transform: translate(-50%, -30%);
     }
 }
-
+.custom-input-border{
+    border-bottom: 0 !important;
+}
 
 .centered-text {
     font-size: 40px;
