@@ -24,6 +24,8 @@ export class NavBarComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isScrolled = event.url === '/contact';
+        this.isCollapsed = true;
+        this.navbarService.setNavbarCollapsed(this.isCollapsed);
       }
     });
   }
