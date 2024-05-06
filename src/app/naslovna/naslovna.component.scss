@@ -5,11 +5,12 @@
 .pozicija{
   min-height: 100vh;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .pozicija {
       min-height: 60vh;
   }
 }
+
 .section1 {
   position: relative;
   top: 0;
@@ -175,18 +176,18 @@ img {
 
 @media (max-width: 2000px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 10%), -160px);
+      transform: translate(calc(100% + 10%), -160px);
   }
 }
 
 @media (max-width: 1900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% + 0%), -160px);
+    transform: translate(80%, -160px);
   }
 }
 @media (max-width: 1600px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 10%), -160px);
+      transform: translate(calc(60% - 10%), -160px);
   }
 }
 @media (max-width: 1500px) {
@@ -206,32 +207,32 @@ img {
 }
 @media (max-width: 1200px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 30%), -160px);
+      transform: translate(calc(50% - 30%), -10px);
   }
 }
 @media (max-width: 1100px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 35%), -160px);
+    transform: translate(15%, -10px);
   }
 }
 @media (max-width: 1000px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 40%), -110px);
+      transform: translate(calc(50% - 40%), -10px);
   }
 }
 @media (max-width: 900px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -110px);
+      transform: translate(calc(50% - 45%), -10px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 50%), -110px);
+    transform: translate(10%, -10px);
   }
 }
 @media (max-width: 800px) {
   .text-wrapperKlasa {
-      transform: translate(calc(50% - 45%), -90px);
+      transform: translate(calc(50% - 45%), -10px);
   }
 }
 @media (max-width: 580px) {
@@ -303,11 +304,12 @@ color: white;
   background-color: rgb(0, 0, 0);
   margin-top: 85vh;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .rowStyle1 {
    margin-top: 45vh;
   }
 }
+
 
 .rowStyle1.navbar-toggler-active {
   margin-top: 55vh;
@@ -505,10 +507,10 @@ min-height: 800px;
   max-height: 500px;
 }
 @media (max-width: 1000px) {
-  max-height: 1000px;
+  max-height: 1200px;
 }
 @media (max-width: 400px) {
-  max-height: 1100px;
+  max-height: 1400px;
 }
 }
 #containerSection3{
