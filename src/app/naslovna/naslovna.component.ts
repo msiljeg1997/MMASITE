@@ -47,7 +47,7 @@ export class NaslovnaComponent implements OnInit {
 
   ngOnInit(): void {
     // setting images
-    this.images = ['/assets/slide_01.jpg', '/assets/slide_02.jpg', '/assets/slide_03.jpg'];
+    this.images = ['/assets/123.jpg', '/assets/456.JPG', '/assets/678.JPG'];
     // setting the initial image and starting automatic image change after 5 seconds (carousel disabled for the first 5 sec)
     setTimeout(() => {
       this.pageLoaded = true;

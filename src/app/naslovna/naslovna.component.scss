@@ -496,7 +496,19 @@ color: white;
 }
 
 /////////////////////////////////////////SECTION3 ABOUT US - BENEFITS /////////////////////{
-
+.ssH{
+  @media (max-width: 450px) {
+    font-size: 15px;
+  }
+}
+.ssp{
+  @media (max-width: 800px) {
+    font-size: 20px !important;
+  }
+  @media (max-width: 450px) {
+    font-size: 15px !important;
+  }
+}
   .aboutUsRow{
     padding-bottom: 50px;
   }
@@ -537,7 +549,7 @@ height: 500px;
   font-size: 17px;
 }
 .red-header-h5{
-  color: rgb(188, 31, 31);
+  color: rgb(214, 212, 212);
     font-weight: bolder;
     font-size: 30px;
   
@@ -595,6 +607,11 @@ background-color: #000000 !important;
 }
 .ngb-carousel .carousel-item {
   margin: 0 !important;
+}
+.image-container {
+  display: flex;
+  justify-content: center; /* Align images horizontally in the center */
+  flex-wrap: wrap; /* Allow the images to wrap onto the next line if there isn't enough space */
 }
 ///section 5////
 
@@ -656,7 +673,7 @@ background-size: cover;
 .cols-sports:hover .info-popup {
   visibility: visible !important;
   opacity: 1 !important;
-  transform: translateY(calc(100% - 90px)) !important; /* moves the info-popup up by an additional 30px on hover */
+  transform: translateY(-30px) !important;
 }
 
 // PARALLAX PICTURE ///
@@ -803,6 +820,16 @@ background-size: cover;
 
 .text-wrapper-h4, .text-wrapper-p{
   color: whitesmoke;
+  
+  @media (max-width: 450px) {
+    font-size: 15px;
+  }
+
+}
+.abc{
+  @media (max-width: 450px) {
+   width:300px;
+  }
 }
 .green-bg-button2{
 
