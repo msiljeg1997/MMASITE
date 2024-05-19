@@ -54,11 +54,18 @@
     }
   }
 
-.element{
-    background-image: url('/assets/sp_01.jpg');
+.element2{
+    background-image: url('/assets/skolarci.jpeg');
     background-size: cover;
     background-position: center center;
     height: 400px;
+}
+
+.element{
+  background-image: url('/assets/predskolarci.jpeg');
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
 }
 #containerUnique{
     min-height: 500px;
