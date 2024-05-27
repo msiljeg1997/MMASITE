@@ -7,13 +7,20 @@
 }
 
 .section_slika_services {
-    height: 300px;
-    background-image: url("/assets/sp_01.jpg");
+    height: 300px;   
+     background-image: url("/assets/template (2).jpg");
     @media (max-width: 450px) {
         height: 300px;
     }
 }
+.fontCustom{
+    font-size: 45px;
+    color: white;
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
 
+}
 
 .text-wrapper1 {
     position: relative;

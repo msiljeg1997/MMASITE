@@ -15,8 +15,6 @@ import { CombatSamboComponent } from './combat-sambo/combat-sambo.component';
 import { FitnessComponent } from './fitness/fitness.component';
 import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
 import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
-import { OnlineComponent } from './online/online.component';
-import { IndividualniComponent } from './individualni/individualni.component';
 import { AboutComponent } from './about/about.component';
 
 
@@ -34,8 +32,6 @@ import { AboutComponent } from './about/about.component';
     FitnessComponent,
     ZaOdrasleComponent,
     ZaDjecuComponent,
-    OnlineComponent,
-    IndividualniComponent,
     AboutComponent
   ],
   imports: [

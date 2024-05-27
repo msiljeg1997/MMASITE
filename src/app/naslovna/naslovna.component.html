@@ -17,7 +17,7 @@
                             <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se <br> rađaju
                                 </span>prvaci</h1>
                             <p class="secondp">Treniraj s pionirima Samba i MMA sporta u Hrvatskoj.</p>
-                            <button class="getStartedBtn">PRIDRUŽI SE</button>
+                            <button class="getStartedBtn" (click)="scrollToSection()">PRIDRUŽI SE</button>
                         </div>
                     </ng-container>
                     <div class="slider-pagination container position-relative start-0 end-0 bottom-0"
@@ -41,7 +41,7 @@
     <div class="rowStyle1"
         [class.navbar-toggler-active]="navbarTogglerState && !(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()"
         [class.dropdown-active]="(navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()">
-        <div class="col-md-12">
+        <div class="col-md-12" id="uniquecontainerSection2Scroll">
 
         </div>
     </div>
@@ -67,7 +67,7 @@
                                 <span class="green-bg-price-from">cijena od</span><span
                                     class="green-bg-price-currency">40 €</span>
                             </div>
-                            <button class="green-bg-button">Zanima me</button>
+                            <button class="green-bg-button" [routerLink]="['/za_odrasle']">Zanima me</button>
                         </div>
                     </div>
                 </div>
@@ -83,14 +83,14 @@
                                 </h4>
                                 <span href="#" style="text-decoration: none;" class="green-bg-a-decoration">-</span>
                                 <p class="green-bg-p">Samoobrana i borilačke vještine su temelj samopouzdanja djece.
-                                    Upišite svoju djecu na naše programe. Uče se osnove gimnastike, judo, sambo i
+                                    Uče se osnove gimnastike, judo, sambo i
                                     naravno zabava uz koordinaciju.</p>
                             </a>
                             <div class="green-bg-price">
                                 <span class="green-bg-price-from">cijena od</span><span
                                     class="green-bg-price-currency">40 €</span>
                             </div>
-                            <button class="green-bg-button">Zanima me</button>
+                            <button class="green-bg-button" [routerLink]="['/za-djecu']">Zanima me</button>
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
                 <div class="col-lg-6 green d-flex justify-content-center">
                     <div class="text-wrapper abc d-flex flex-column align-items-center justify-content-center ">
                         <h4 class="text-wrapper-h4 mb-4 mt-4"><b>U središtu našeg kluba stoji naš glavni trener – <span
-                                    style="color: red;">Dejan
+                                    style="color: rgb(158, 1, 1)">Dejan
                                     Gunjavić.</span>
                                 Kao stup izvrsnosti i predanosti njegova strast prema borilačkim sportovima nadilazi
                                 granice te oblikuje put sportaša i natjecatelja.</b></h4>
@@ -270,12 +270,14 @@
                             one oko sebe da dosegnu visoke razine. Izvan borilišta poznat je po svojoj ljubaznosti i
                             iskrenoj brizi za ljude oko sebe.
                         </p>
-                        <p class="text-wrapper-p">
+                        <p class="text-wrapper-p aboutUsPP">
                             Pridružite se našem timu uz njegovo vodstvo!
                         </p>
                         <div class="d-flex flex-column flex-sm-row justify-content-between w-70">
-                            <button type="button" class="green-bg-button2 mb-2 mb-sm-0">Treninzi za djecu</button>
-                            <button type="button" class="green-bg-button2">Treninzi za odrasle</button>
+                            <button type="button" class="green-bg-button2 mb-2 mb-sm-0"
+                                [routerLink]="['/za_odrasle']">Treninzi za odrasle</button>
+                            <button type="button" class="green-bg-button2" [routerLink]="['/za-djecu']">Treninzi za
+                                djecu</button>
                         </div>
 
                     </div>
@@ -299,15 +301,14 @@
                     style="max-height: 500px;">
                     <div class="red-header-wrapper red-margins-right">
                         <div class="red-header-left1">
-                            <h5 class="mb-3 red-header-h5 ssp">- Fizička kondicija</h5>
+                            <h5 class="mb-3 red-header-h5 ssp">Fizička kondicija</h5>
+                        </div>
+                        <div class="red-header-left1 red-margins-right">
+                            <h5 class="mb-3 red-header-h5 ssp">Samoobrana</h5>
 
                         </div>
                         <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5 ssp">- Samoobrana</h5>
-
-                        </div>
-                        <div class="red-header-left1 red-margins-right">
-                            <h5 class="mb-3 red-header-h5 ssp">- Samopouzdanje</h5>
+                            <h5 class="mb-3 red-header-h5 ssp">Samopouzdanje</h5>
 
                         </div>
                     </div>
@@ -320,15 +321,17 @@
                     style="max-height: 500px;">
                     <div class="red-header-wrapper  red-margins-left">
                         <div class="red-header-right1">
-                            <h5 class="mb-3 red-header-h5 ssp">- Disciplina</h5>
+                            <h5 class="mb-3 red-header-h5 ssp">Disciplina</h5>
 
                         </div>
                         <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5 ssp">- Oslobađanje stresa</h5>
+                            <h5 class="mb-3 red-header-h5 ssp">Oslobađanje stresa
+                            </h5>
 
                         </div>
                         <div class="red-header-right1  red-margins-left">
-                            <h5 class="mb-3 red-header-h5 ssp">- Timski rad i prijateljstvo</h5>
+                            <h5 class="mb-3 red-header-h5 ssp">Timski rad i
+                                prijateljstvo</h5>
 
                         </div>
                     </div>
@@ -346,8 +349,8 @@
     <!-- FORMA -->
     <div class="container-fluid mb-5">
         <div class="container">
-            <h2 class="text-center text-white mt-5 mb-5">ISPUNITE OBRAZAC ZA <span
-                    style="color: rgb(210, 24, 24);">PRIJAVU</span></h2>
+            <h2 class="text-center text-white mt-5 mb-5" style="font-weight: bolder;">ISPUNITE OBRAZAC ZA <span
+                    style=" color: rgb(210, 24, 24);">PRIJAVU</span></h2>
             <form class="form-custom bg-dark text-white p-3  border border-danger">
                 <div class="form-group">
                     <label for="fullName">Ime i prezime</label>

@@ -497,6 +497,9 @@ color: white;
 
 /////////////////////////////////////////SECTION3 ABOUT US - BENEFITS /////////////////////{
 .ssH{
+font-size: 35px;
+font-weight: bold;
+text-transform: uppercase;
   @media (max-width: 450px) {
     font-size: 15px;
   }
@@ -550,9 +553,17 @@ height: 500px;
 }
 .red-header-h5{
   color: rgb(214, 212, 212);
-    font-weight: bolder;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
   
+}
+.kocka-crvena{
+  width: 100px;
+  height: 100px;
+  color: red;
+  z-index: 999;
+  position: relative;
 }
 
 .red-bg-a-decoration {
@@ -574,8 +585,17 @@ height: 500px;
   font-size: 20px;
   font-weight: bolder;
   color: rgb(158, 1, 1);
+  text-transform: uppercase;
 
   
+}
+.aboutUsPP{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 @media (max-width: 999px) {

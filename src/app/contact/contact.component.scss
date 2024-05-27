@@ -10,6 +10,18 @@
     height: 100px;
 }
 
+.fontCustom{
+    font-size: 45px;
+    color: white;
+    font-weight: bolder;
+    @media (max-width: 450px) {
+        font-size: 20px;
+    }
+
+}
+.fontCustom2{
+    font-weight: bold;
+}
 
 .text-wrapper1 {
     position: relative;

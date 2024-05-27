@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { NavbarService } from '../navbar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-naslovna',
@@ -34,7 +35,7 @@ export class NaslovnaComponent implements OnInit {
   screenWidth: number;
 
 
-  constructor(public navbarService: NavbarService) {
+  constructor(public navbarService: NavbarService, private router: Router) {
     this.dropdownOpened$.subscribe(open => {
       console.log('Dropdown opened2:', open);
     });
@@ -47,7 +48,7 @@ export class NaslovnaComponent implements OnInit {
 
   ngOnInit(): void {
     // setting images
-    this.images = ['/assets/123.jpg', '/assets/naslovna3.JPG', '/assets/678.JPG'];
+    this.images = ['/assets/naslovna3.jpg', '/assets/naslovna1.jpg', '/assets/naslovna2.jpg',];
     // setting the initial image and starting automatic image change after 5 seconds (carousel disabled for the first 5 sec)
     setTimeout(() => {
       this.pageLoaded = true;
@@ -111,5 +112,15 @@ export class NaslovnaComponent implements OnInit {
   // previous changes the image to the previous one
   previous() {
     this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+  }
+
+  scrollToSection() {
+    if (window.innerWidth > 700) {
+      const element = document.getElementById('uniquecontainerSection2Scroll');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      const element = document.getElementById('uniquecontainerSection2');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
