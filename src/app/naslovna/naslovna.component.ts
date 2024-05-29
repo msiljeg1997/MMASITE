@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { NavbarService } from '../navbar.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-naslovna',
@@ -33,11 +38,19 @@ export class NaslovnaComponent implements OnInit {
   dropdownOpened$ = this.navbarService.dropdownOpened$;
   navbarTogglerState = false;
   screenWidth: number;
+  form: FormGroup = new FormGroup({
+    type: new FormControl('', Validators.required),
+    sport: new FormControl({ value: '', disabled: true })
+  });
+  sportsOptions: string[] = [];
+  message: string = '';
+  loading = true;
 
 
-  constructor(public navbarService: NavbarService, private router: Router) {
+
+
+  constructor(public navbarService: NavbarService, private router: Router, private http: HttpClient) {
     this.dropdownOpened$.subscribe(open => {
-      console.log('Dropdown opened2:', open);
     });
     this.navbarService.navbarTogglerState$.subscribe(state => {
       this.navbarTogglerState = state;
@@ -46,7 +59,7 @@ export class NaslovnaComponent implements OnInit {
     window.onresize = () => { this.screenWidth = window.innerWidth; };
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     // setting images
     this.images = ['/assets/naslovna3.jpg', '/assets/naslovna1.jpg', '/assets/naslovna2.jpg',];
     // setting the initial image and starting automatic image change after 5 seconds (carousel disabled for the first 5 sec)
@@ -59,7 +72,25 @@ export class NaslovnaComponent implements OnInit {
     // starting zoom animation after 5.5 seconds
     setTimeout(() => {
       this.zoomState = 'small';
-    }, 5000);
+    }, 5500);
+
+    // form initialization
+    this.form = new FormGroup({
+      type: new FormControl(''),
+      sport: new FormControl({ value: '', disabled: true })
+    });
+
+    // subscribe to value changes
+    this.form.get('type')?.valueChanges.subscribe(selectedType => {
+      if (selectedType === 'Treninzi za djecu') {
+        this.form.get('sport')?.enable();
+        this.form.get('sport')?.setValue('SAMBO');
+        this.sportsOptions = ['SAMBO'];
+      } else {
+        this.form.get('sport')?.enable(); // Enable the 'sport' control
+        this.sportsOptions = ['MMA', 'SAMBO', 'COMBAT SAMBO', 'FITNESS'];
+      }
+    });
   }
   // onZoomOutEnd is called when the zoom animation ends
   onZoomOutEnd() {
@@ -122,5 +153,32 @@ export class NaslovnaComponent implements OnInit {
       const element = document.getElementById('uniquecontainerSection2');
       element?.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+  submitForm() {
+    if (!this.form.valid) {
+      if (this.form.controls['email'].invalid) {
+        alert('Email is not valid.');
+      } else {
+        alert('Please fill in all fields.');
+      }
+      return;
+    }
+
+    const formData = this.form.value;
+
+    this.http.post('http://your-php-backend-url', formData).subscribe(
+      (response: any) => {
+        console.log(response);
+        if (response.message === 'YES') {
+          alert('Form successfully submitted!');
+        } else {
+          alert('There was an error submitting the form. Please try again.');
+        }
+      },
+      (error) => {
+        console.error(error);
+        alert('There was an SERVER error submitting the form. Please try again.');
+      }
+    );
   }
 }

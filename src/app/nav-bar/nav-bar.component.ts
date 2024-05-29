@@ -16,7 +16,6 @@ export class NavBarComponent {
 
   constructor(private navbarService: NavbarService, private renderer: Renderer2, private router: Router) {
     this.navbarService.dropdownOpened$.subscribe(open => {
-      console.log('Dropdown opened1:', open);
     });
     this.navbarService.navbarTogglerState$.subscribe(state => {
       this.navbarTogglerState = state;

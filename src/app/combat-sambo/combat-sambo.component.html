@@ -63,43 +63,35 @@
     <div class="container">
         <h2 class="text-center text-white mt-5 mb-5" style="font-weight: bolder;">ISPUNITE OBRAZAC ZA <span
                 style="color: rgb(210, 24, 24);">PRIJAVU</span></h2>
-        <form class="form-custom bg-dark text-white p-3  border border-danger">
-            <div class="form-group">
-                <label for="fullName">Ime i prezime</label>
-                <input type="text" class="form-control bg-dark text-white border-danger" id="fullName"
-                    placeholder="Ime i prezime">
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control bg-dark text-white border-danger" id="email"
-                    placeholder="Enter Email">
-            </div>
-            <div class="form-group">
-                <label for="contactNumber">Kontakt broj</label>
-                <input type="tel" class="form-control bg-dark text-white border-danger" id="contactNumber"
-                    placeholder="Kontakt broj">
-            </div>
-            <div class="form-group">
-                <label for="sport">Odaberi sport</label>
-                <select class="form-control bg-dark text-white border-danger" id="sport">
-                    <option selected="selected" disabled="disabled"></option>
-                    <option>MMA</option>
-                    <option>SAMBO</option>
-                    <option>COMBAT SAMBO</option>
-                    <option>FITNESS</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="type">Način treniranja</label>
-                <select class="form-control bg-dark text-white border-danger" id="type">
-                    <option selected="selected" disabled="disabled"></option>
-                    <option>Online</option>
-                    <option>Privatno</option>
-                </select>
-            </div>
-            <div class="form-group text-center">
-                <button type="submit" class="btn btn-danger mt-3">Pošalji</button>
-            </div>
-        </form>
+                <form [formGroup]="form" (ngSubmit)="submitForm()" class="form-custom bg-dark text-white p-3  border border-danger">
+                    <div class="form-group">
+                      <label for="fullName">Ime i prezime</label>
+                      <input formControlName="fullName" type="text" class="form-control bg-dark text-white border-danger" id="fullName"
+                        placeholder="Ime i prezime">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input formControlName="email" type="email" class="form-control bg-dark text-white border-danger" id="email"
+                        placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="contactNumber">Kontakt broj</label>
+                      <input formControlName="contactNumber" type="tel" class="form-control bg-dark text-white border-danger" id="contactNumber"
+                        placeholder="Kontakt broj">
+                    </div>
+                    <div class="form-group">
+                      <label for="sport">Odaberi sport</label>
+                      <select formControlName="sport" class="form-control bg-dark text-white border-danger" id="sport">
+                        <option value="" selected="selected" disabled="disabled"></option>
+                        <option value="MMA">MMA</option>
+                        <option value="SAMBO">SAMBO</option>
+                        <option value="COMBAT SAMBO">COMBAT SAMBO</option>
+                        <option value="FITNESS">FITNESS</option>
+                      </select>
+                    </div>
+                    <div class="form-group text-center">
+                      <button type="submit" class="btn btn-danger mt-3">Pošalji</button>
+                    </div>
+                  </form>
     </div>
 </div>

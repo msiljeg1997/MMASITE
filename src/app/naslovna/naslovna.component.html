@@ -14,7 +14,7 @@
                         <div class="text-wrapper text-wrapperKlasa position-absolute start-0 top-50"
                             [ngClass]="{'pushed-down': (navbarService.isDropdownOpened('programi') || navbarService.isDropdownOpened('sportovi')) && !navbarService.isNavbarCollapsed()}">
                             <p class="firstP">Dobrodošli u Crows</p>
-                            <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se <br> rađaju
+                            <h1 class="firstH1">Mjesto gdje <span style="color: rgb(188, 31, 31);">se <br> stvaraju
                                 </span>prvaci</h1>
                             <p class="secondp">Treniraj s pionirima Samba i MMA sporta u Hrvatskoj.</p>
                             <button class="getStartedBtn" (click)="scrollToSection()">PRIDRUŽI SE</button>
@@ -351,7 +351,8 @@
         <div class="container">
             <h2 class="text-center text-white mt-5 mb-5" style="font-weight: bolder;">ISPUNITE OBRAZAC ZA <span
                     style=" color: rgb(210, 24, 24);">PRIJAVU</span></h2>
-            <form class="form-custom bg-dark text-white p-3  border border-danger">
+            <form [formGroup]="form" (ngSubmit)="submitForm()"
+                class="form-custom bg-dark text-white p-3  border border-danger">
                 <div class="form-group">
                     <label for="fullName">Ime i prezime</label>
                     <input type="text" class="form-control bg-dark text-white border-danger" id="fullName"
@@ -371,7 +372,7 @@
                 <!-- DODATI DA KAD STISNU ZA DJECU DA NEDA NISTA DRUGI DIO FORME OSIM SAMBO -->
                 <div class="form-group">
                     <label for="type">Tip treninga</label>
-                    <select class="form-control bg-dark text-white border-danger" id="type">
+                    <select formControlName="type" class="form-control bg-dark text-white border-danger" id="type">
                         <option selected="selected" disabled="disabled"></option>
                         <option>Treninzi za djecu</option>
                         <option>Treninzi za odrasle</option>
@@ -379,12 +380,8 @@
                 </div>
                 <div class="form-group">
                     <label for="sport">Odaberi sport</label>
-                    <select class="form-control bg-dark text-white border-danger" id="sport">
-                        <option selected="selected" disabled="disabled"></option>
-                        <option>MMA</option>
-                        <option>SAMBO</option>
-                        <option>COMBAT SAMBO</option>
-                        <option>FITNESS</option>
+                    <select formControlName="sport" class="form-control bg-dark text-white border-danger" id="sport">
+                        <option *ngFor="let sport of sportsOptions" [value]="sport">{{sport}}</option>
                     </select>
                 </div>
                 <div class="form-group text-center">

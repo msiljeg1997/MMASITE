@@ -21,6 +21,14 @@
   }
 
 }
+.carousel-image{
+  height: 500px;
+  width: auto;
+  object-fit: cover;
+  @media (max-width: 600px) {
+    object-fit: contain;
+  }
+}
 
 
 .text-wrapper1 {
@@ -70,11 +78,12 @@
 }
 
 .element{
-  background-image: url('/assets/predskolarci.jpeg');
+  background-image: url('/assets/1.7.jpeg');
   background-size: cover;
   background-position: center center;
   height: 400px;
 }
+
 #containerUnique{
     min-height: 500px;
 }

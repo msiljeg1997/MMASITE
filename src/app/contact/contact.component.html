@@ -22,7 +22,8 @@
                             </div>
                             <div>
                                 <h4 class="mb-3 white-text">Adresa kluba</h4>
-                                <address class="mb-0 text-secondary white-text">Gradiscanka casta, 12, 10 000 - Zagreb
+                                <address class="mb-0 text-secondary white-text">Ulica Nikole Andrića 3, Sloboština, 10
+                                    000 - Zagreb
                                 </address>
                             </div>
                         </div>
@@ -40,8 +41,7 @@
                                         <h4 class="mb-3 white-text">Telefon</h4>
                                         <p class="mb-0">
                                             <a class="link-secondary text-decoration-none white-text"
-                                                href="tel:+15057922430">(505)
-                                                792-2430</a>
+                                                href="tel:+15057922430">+385 99 5271 154</a>
                                         </p>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                         <h4 class="mb-3 white-text">E-Mail</h4>
                                         <p class="mb-0">
                                             <a class="link-secondary text-decoration-none white-text"
-                                                href="mailto:demo@yourdomain.com">demo@yourdomain.com</a>
+                                                href="mailto:demo@yourdomain.com">Gunja43@gmail.com</a>
                                         </p>
                                     </div>
                                 </div>
@@ -80,12 +80,12 @@
                             <div>
                                 <h4 class="mb-3 white-text">Radno vrijeme</h4>
                                 <div class="d-flex mb-1">
-                                    <p class="text-secondary fw-bold mb-0 me-5 white-text">Mon - Fri</p>
-                                    <p class="text-secondary mb-0 white-text">9am - 5pm</p>
+                                    <p class="text-secondary fw-bold mb-0 me-5 white-text">Pon, sri, pet</p>
+                                    <p class="text-secondary mb-0 white-text">19:00 do 23:00</p>
                                 </div>
                                 <div class="d-flex">
-                                    <p class="text-secondary fw-bold mb-0 me-5 white-text">Sat - Sun</p>
-                                    <p class="text-secondary mb-0 white-text">9am - 2pm</p>
+                                    <p class="text-secondary fw-bold mb-0 me-5 white-text">Uto, čet</p>
+                                    <p class="text-secondary mb-0 white-text">18:30 do 22:30</p>
                                 </div>
                             </div>
                         </div>
@@ -95,47 +95,40 @@
             <div class="col-12 col-lg-6">
                 <div class="bg-dark shadow-sm overflow-hidden inputBorder1">
 
-                    <form action="#!">
+                    <form [formGroup]="form" (ngSubmit)="submitForm()">
                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                             <div class="col-12">
-                                <label for="fullname" class="form-label white-text">Ime i prezime <span
-                                        class="text-danger">*</span></label>
+                                <label for="fullname" class="form-label white-text">Ime i prezime</label>
                                 <input type="text" class="form-control white-text custom-input" id="fullname"
-                                    name="fullname" value="" required>
+                                    formControlName="fullname" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <label for="email" class="form-label white-text">Email <span
-                                        class="text-danger">*</span></label>
+                                <label for="email" class="form-label white-text">Email </label>
                                 <div class="input-group">
-
                                     <input type="email" class="form-control white-text custom-input" id="email"
-                                        name="email" value="" required>
+                                        formControlName="email" required>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="phone" class="form-label white-text">Kontakt broj</label>
                                 <div class="input-group">
-
                                     <input type="tel" class="form-control white-text custom-input" id="phone"
-                                        name="phone" value="">
+                                        formControlName="phone">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <label for="message"
-                                    class="form-label white-text custom-input custom-input-border">Poruka<span
-                                        class="text-danger">*</span></label>
-                                <textarea class="form-control white-text custom-input" id="message" name="message"
-                                    rows="3" required></textarea>
+                                    class="form-label white-text custom-input custom-input-border">Poruka</label>
+                                <textarea class="form-control white-text custom-input" id="message"
+                                    formControlName="message" rows="3" required></textarea>
                             </div>
                             <div class="col-12">
                                 <div class="d-grid text-center">
-                                    <h4 class="green-bg-button2">Pošalji
-                                    </h4>
+                                    <button type="submit" class="green-bg-button2">Pošalji</button>
                                 </div>
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

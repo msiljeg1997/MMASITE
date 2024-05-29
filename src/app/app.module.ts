@@ -16,6 +16,10 @@ import { FitnessComponent } from './fitness/fitness.component';
 import { ZaOdrasleComponent } from './za-odrasle/za-odrasle.component';
 import { ZaDjecuComponent } from './za-djecu/za-djecu.component';
 import { AboutComponent } from './about/about.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -40,6 +44,8 @@ import { AboutComponent } from './about/about.component';
     NgbModule,
     NgbDropdownModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule
 
 
 

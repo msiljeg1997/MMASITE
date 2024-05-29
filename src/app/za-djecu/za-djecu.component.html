@@ -35,11 +35,11 @@
                 pažnju, što pomaže djeci da razviju bolji fokus.</li>
         </ul>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-5 nemici">
         <ngb-carousel>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci1.jpeg" alt="First slide" style="max-width: 600px;">
+                    <img class="carousel-image" src="/assets/1.8.jpeg" alt="Third slide" style="max-width: 600px">
                 </div>
                 <div class="carousel-caption">
 
@@ -47,7 +47,7 @@
             </ng-template>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci2.jpeg" alt="Second slide" style="max-width: 600px">
+                    <img class="carousel-image" src="/assets/1.3.jpeg" alt="First slide">
                 </div>
                 <div class="carousel-caption">
 
@@ -55,12 +55,56 @@
             </ng-template>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci3.jpeg" alt="Third slide" style="max-width: 600px">
+                    <img class="carousel-image" src="/assets/predskolarci.jpeg" alt="Third slide"
+                        style="max-width: 600px">
                 </div>
                 <div class="carousel-caption">
 
                 </div>
             </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/1.2.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/1.4.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/1.5.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/1.6.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/1.9.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+
         </ngb-carousel>
     </div>
     <div class="container container2 pt-5">
@@ -90,7 +134,7 @@
         <ngb-carousel>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci1.jpeg" alt="First slide" style="max-width: 600px;">
+                    <img class="carousel-image" src="/assets/2.3.jpeg" alt="Third slide" style="max-width: 600px">
                 </div>
                 <div class="carousel-caption">
 
@@ -98,7 +142,7 @@
             </ng-template>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci2.jpeg" alt="Second slide" style="max-width: 600px">
+                    <img class="carousel-image" src="/assets/2.2.jpeg" alt="Third slide" style="max-width: 600px">
                 </div>
                 <div class="carousel-caption">
 
@@ -106,50 +150,59 @@
             </ng-template>
             <ng-template ngbSlide>
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="/assets/galerija_skolarci3.jpeg" alt="Third slide" style="max-width: 600px">
+                    <img class="carousel-image" src="/assets/galerija_skolarci2.jpeg" alt="Second slide"
+                        style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/2.1.jpeg" alt="Third slide" style="max-width: 600px">
+                </div>
+                <div class="carousel-caption">
+
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="carousel-image" src="/assets/2.6.jpeg" alt="Third slide" style="max-width: 600px">
                 </div>
                 <div class="carousel-caption">
 
                 </div>
             </ng-template>
         </ngb-carousel>
+
     </div>
     <div class="container-fluid mb-5">
         <div class="container">
             <h2 class="text-center text-white mt-5 mb-5" style="font-weight: bolder;">ISPUNITE OBRAZAC ZA <span
                     style="color: rgb(210, 24, 24);">PRIJAVU</span></h2>
-            <form class="form-custom bg-dark text-white p-3  border border-danger">
+            <form [formGroup]="form" (ngSubmit)="submitForm()"
+                class="form-custom bg-dark text-white p-3  border border-danger">
                 <div class="form-group">
                     <label for="fullName">Ime i prezime</label>
-                    <input type="text" class="form-control bg-dark text-white border-danger" id="fullName"
-                        placeholder="Ime i prezime">
+                    <input formControlName="fullName" type="text" class="form-control bg-dark text-white border-danger"
+                        id="fullName" placeholder="Ime i prezime">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control bg-dark text-white border-danger" id="email"
-                        placeholder="Enter Email">
+                    <input formControlName="email" type="email" class="form-control bg-dark text-white border-danger"
+                        id="email" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
                     <label for="contactNumber">Kontakt broj</label>
-                    <input type="tel" class="form-control bg-dark text-white border-danger" id="contactNumber"
+                    <input formControlName="contactNumber" type="tel"
+                        class="form-control bg-dark text-white border-danger" id="contactNumber"
                         placeholder="Kontakt broj">
                 </div>
                 <div class="form-group">
                     <label for="sport">Odaberi sport</label>
-                    <select class="form-control bg-dark text-white border-danger" id="sport">
-                        <option selected="selected" disabled="disabled"></option>
-                        <option>MMA</option>
-                        <option>SAMBO</option>
-                        <option>COMBAT SAMBO</option>
-                        <option>FITNESS</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="type">Način treniranja</label>
-                    <select class="form-control bg-dark text-white border-danger" id="type">
-                        <option selected="selected" disabled="disabled"></option>
-                        <option>Online</option>
-                        <option>Privatno</option>
+                    <select formControlName="sport" class="form-control bg-dark text-white border-danger" id="sport">
+                        <option value="" selected="selected" disabled="disabled"></option>
+                        <option value="SAMBO">SAMBO</option>
                     </select>
                 </div>
                 <div class="form-group text-center">
