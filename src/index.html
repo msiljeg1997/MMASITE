@@ -1,13 +1,79 @@
 <!doctype html>
-<html lang="en">
+<html lang="hr">
+
 <head>
   <meta charset="utf-8">
-  <title>BOX</title>
-  <base href="/">
+  <title>Sambo Klub - MMA, Combat Sambo i Fitness</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Mi smo prvi hrvatski Sambo klub s najviše medalja. Treniramo Sambo, Combat Sambo, MMA i fitness za djecu i odrasle! Pridružite se našem vrhunskom timu i poboljšajte svoje borbene vještine i kondiciju.">
+  <meta name="keywords"
+    content="MMA, Combat Sambo, Sambo, fitness, borbeni sportovi, trening, snaga, izdržljivost, djeca, odrasli, Zagreb">
+  <meta name="author" content="Sambo Klub">
+
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="og:title" content="Sambo Klub - MMA, Combat Sambo, Sambo i Fitness">
+  <meta property="og:description"
+    content="Mi smo prvi hrvatski Sambo klub s najviše medalja. Treniramo Sambo, Combat Sambo, MMA i fitness za djecu i odrasle! Pridružite se našem vrhunskom timu i poboljšajte svoje borbene vještine i kondiciju.">
+  <meta property="og:url" content="https://www.samboklub.hr">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sambo Klub - MMA, Combat Sambo, Sambo i Fitness">
+  <meta name="twitter:description"
+    content="Mi smo prvi hrvatski Sambo klub s najviše medalja. Treniramo Sambo, Combat Sambo, MMA i fitness za djecu i odrasle! Pridružite se našem vrhunskom timu i poboljšajte svoje borbene vještine i kondiciju.">
+
+
 </head>
+
 <body>
   <app-root></app-root>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "SportsClub",
+    "name": "Sambo Klub",
+    "description": "Mi smo prvi hrvatski Sambo klub s najviše medalja. Treniramo Sambo, Combat Sambo, MMA i fitness za djecu i odrasle! Pridružite se našem vrhunskom timu i poboljšajte svoje borbene vještine i kondiciju.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ulica Nikole Andrića 3, Sloboština",
+      "addressLocality": "Zagreb",
+      "postalCode": "10000",
+      "addressCountry": "HR"
+    },
+    "url": "https://www.samboklub.hr",
+    "logo": "\assets\crows_logo_1.1-rb.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+385-99-5271-154",
+      "email": "Gunja43@gmail.com",
+      "hoursAvailable": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday", "Friday"],
+          "opens": "19:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Thursday"],
+          "opens": "18:30",
+          "closes": "22:30"
+        }
+      ]
+    },
+    "sameAs": [
+      "https://www.facebook.com/samboklub",
+      "https://www.instagram.com/samboklub"
+    ]
+  }
+  </script>
 </body>
+
 </html>
