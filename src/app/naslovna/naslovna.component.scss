@@ -7,7 +7,7 @@
 }
 @media (max-width: 1200px) {
   .pozicija {
-      min-height: 60vh;
+      min-height: 65vh;
   }
 }
 
@@ -19,6 +19,13 @@
   height: fit-content;
   object-fit: cover;
   z-index: 1;
+}
+.slika1{
+  height: 600px;
+  @media (max-width: 1000px) {
+    object-fit: contain;
+    height: auto;
+  }
 }
 .picsum-img-wrapper img {
   object-fit: cover;
