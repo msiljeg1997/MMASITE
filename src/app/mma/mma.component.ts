@@ -45,7 +45,7 @@ export class MmaComponent implements OnInit {
 
     const formData = this.form.value;
 
-    this.http.post('http://your-php-backend-url', formData).subscribe(
+    this.http.post('http://crowsklub.hr/send_mail/index.php', formData).subscribe(
       (response: any) => {
         console.log(response);
         if (response.message === 'YES') {

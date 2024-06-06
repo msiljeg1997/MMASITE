@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 export class ZaDjecuComponent {
   backgroundSize: string = '980px';
   isMobile = window.innerWidth < 450;
-  
+
   form: FormGroup = new FormGroup({
     fullName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     contactNumber: new FormControl('', Validators.required)
   });
-  
+
   constructor(private http: HttpClient) { }
 
   @HostListener('window:resize', ['$event'])
@@ -46,7 +46,7 @@ export class ZaDjecuComponent {
 
     const formData = this.form.value;
 
-    this.http.post('http://your-php-backend-url', formData).subscribe(
+    this.http.post('http://crowsklub.hr/send_mail/index.php', formData).subscribe(
       (response: any) => {
         console.log(response);
         if (response.message === 'YES') {
